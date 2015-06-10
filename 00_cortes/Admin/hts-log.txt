@@ -1,0 +1,56 @@
+HTTrack3.48-21+htsswf+htsjava launched on Tue, 09 Jun 2015 22:28:06 at http://geedmo.com/?item=Wintermin +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://geedmo.com/?item=Wintermin -O1 "C:\My Web Sites\admin" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+22:28:07	Warning: 	Note: due to geedmo.com remote robots.txt rules, links beginning with these path will be forbidden: /cloud/ (see in the options to disable this)
+22:28:14	Warning: 	Moved Temporarily for geedmo.com/
+22:28:14	Warning: 	File has moved from geedmo.com/ to http://geedmo.com/home
+22:29:00	Warning: 	Moved Temporarily for geedmo.com/codecanyon/47admin/
+22:29:00	Warning: 	File has moved from geedmo.com/codecanyon/47admin/ to dashboard.html
+22:32:02	Warning: 	Moved Temporarily for geedmo.com/codecanyon/plan/
+22:32:02	Warning: 	File has moved from geedmo.com/codecanyon/plan/ to bootstrap.html
+22:32:04	Warning: 	Moved Temporarily for geedmo.com/codecanyon/dropper/
+22:32:04	Warning: 	File has moved from geedmo.com/codecanyon/dropper/ to bootstrap3/
+22:39:14	Warning: 	Retry after error -4 (No data (connection closed)) at link geedmo.com/themeforest/singular/app/vendor/open-sans-fontface/fonts/Italic/OpenSans-Italic.eot (from geedmo.com/themeforest/singular/app/css/app.css)
+22:41:40	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/boske/assets/ico/favicon.ico (from geedmo.com/codecanyon/boske/examples/blog/index.html)
+22:41:41	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/boske/components/ (from geedmo.com/codecanyon/boske/examples/navbar/index.html)
+22:41:41	Warning: 	Retry after error -4 (No data (connection closed)) at link geedmo.com/codecanyon/elemento/assets/img/hue.png (from geedmo.com/codecanyon/elemento/assets/css/bootstrap.min.css)
+22:43:37	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/elemento/bootstrap3/index.html (from geedmo.com/codecanyon/lush-content-slider/demo/iframe.html)
+22:43:37	Warning: 	Retry after error -4 (No data (connection closed)) at link geedmo.com/codecanyon/lush-content-slider/lush/builder/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png (from geedmo.com/codecanyon/lush-content-slider/lush/builder/css/jquery-ui-1.10.3.custom.min.css)
+22:43:37	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/47admin/app/fonts/glyphicons-halflings-regular.eot (from geedmo.com/codecanyon/47admin/app/css/bootstrap.css)
+22:43:37	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/47admin/app/fonts/glyphicons-halflings-regular.eot? (from geedmo.com/codecanyon/47admin/app/css/bootstrap.css)
+22:43:37	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/47admin/app/fonts/glyphicons-halflings-regular.woff (from geedmo.com/codecanyon/47admin/app/css/bootstrap.css)
+22:43:37	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/47admin/app/fonts/glyphicons-halflings-regular.ttf (from geedmo.com/codecanyon/47admin/app/css/bootstrap.css)
+22:43:37	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/47admin/app/fonts/glyphicons-halflings-regular.svg (from geedmo.com/codecanyon/47admin/app/css/bootstrap.css)
+22:43:38	Warning: 	Retry after error -4 (No data (connection closed)) at link geedmo.com/codecanyon/47admin/vendor/datatable/extensions/datatable-bootstrap/css/dataTables.bootstrap.css (from geedmo.com/codecanyon/47admin/table-datatable.html)
+22:44:37	Warning: 	Retry after error -2 (Receive Time Out) at link geedmo.com/envato/videos/big_buck_bunny.mp4 (from geedmo.com/codecanyon/plan/plan.html)
+22:44:37	Warning: 	Retry after error -4 (No data (connection closed)) at link geedmo.com/envato/videos/big_buck_bunny.webm (from geedmo.com/codecanyon/plan/plan.html)
+22:45:01	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/bootstrap2/assets/ico/apple-touch-icon-144-precomposed.png (from geedmo.com/codecanyon/dropper/bootstrap2/)
+22:45:01	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/bootstrap2/assets/ico/apple-touch-icon-114-precomposed.png (from geedmo.com/codecanyon/dropper/bootstrap2/)
+22:45:01	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/bootstrap2/assets/ico/apple-touch-icon-72-precomposed.png (from geedmo.com/codecanyon/dropper/bootstrap2/)
+22:45:01	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/bootstrap2/assets/ico/apple-touch-icon-57-precomposed.png (from geedmo.com/codecanyon/dropper/bootstrap2/)
+22:45:01	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/bootstrap2/assets/ico/favicon.png (from geedmo.com/codecanyon/dropper/bootstrap2/)
+22:45:01	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/bootstrap2/assets/js/ga.js (from geedmo.com/codecanyon/dropper/bootstrap2/)
+22:47:10	Warning: 	Retry after error -4 (No data (connection closed)) at link geedmo.com/codecanyon/dropper/bootstrap2/assets/css/bootstrap.purple.min.css (from geedmo.com/codecanyon/dropper/bootstrap2/)
+22:47:14	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/plan/assets/css/font/vjs.eot (from geedmo.com/codecanyon/plan/assets/css/video-js.min.css)
+22:47:14	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/plan/assets/css/font/vjs.eot? (from geedmo.com/codecanyon/plan/assets/css/video-js.min.css)
+22:47:14	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/plan/assets/css/font/vjs.woff (from geedmo.com/codecanyon/plan/assets/css/video-js.min.css)
+22:47:14	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/plan/assets/css/font/vjs.ttf (from geedmo.com/codecanyon/plan/assets/css/video-js.min.css)
+22:49:52	Warning: 	file not stored in cache due to bogus state (broken size, expected 5510872 got 3117647): geedmo.com/envato/videos/big_buck_bunny.mp4
+22:49:52	Warning: 	Retry after error -4 (Incorrect length (3117647 Bytes, 5510872 expected)) at link geedmo.com/envato/videos/big_buck_bunny.mp4 (from geedmo.com/codecanyon/plan/plan.html)
+22:49:53	Warning: 	file not stored in cache due to bogus state (broken size, expected 5071076 got 2977631): geedmo.com/envato/videos/big_buck_bunny.webm
+22:49:53	Warning: 	Retry after error -4 (Incorrect length (2977631 Bytes, 5071076 expected)) at link geedmo.com/envato/videos/big_buck_bunny.webm (from geedmo.com/codecanyon/plan/plan.html)
+22:49:53	Warning: 	Retry after error -4 (No data (connection closed)) at link geedmo.com/codecanyon/dropper/bootstrap2/assets/img/ico/facebook.png (from geedmo.com/codecanyon/dropper/bootstrap2/extents.html)
+22:49:53	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/assets/ico/apple-touch-icon-144-precomposed.png (from geedmo.com/codecanyon/dropper/bootstrap2/home.html)
+22:49:53	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/assets/ico/apple-touch-icon-114-precomposed.png (from geedmo.com/codecanyon/dropper/bootstrap2/home.html)
+22:49:53	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/assets/ico/apple-touch-icon-72-precomposed.png (from geedmo.com/codecanyon/dropper/bootstrap2/home.html)
+22:49:53	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/assets/ico/apple-touch-icon-57-precomposed.png (from geedmo.com/codecanyon/dropper/bootstrap2/home.html)
+22:49:53	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/assets/ico/favicon.png (from geedmo.com/codecanyon/dropper/bootstrap2/home.html)
+22:49:53	Error: 	"Not Found" (404) at link geedmo.com/codecanyon/dropper/bootstrap2/blog-single.html (from geedmo.com/codecanyon/dropper/bootstrap2/blog.html)
+
+HTTrack Website Copier/3.48-21 mirror complete in 24 minutes 48 seconds : 749 links scanned, 710 files written (49584222 bytes overall) [37643209 bytes received at 25297 bytes/sec], 15168804 bytes transferred using HTTP compression in 386 files, ratio 19%, 3.7 requests per connection
+(24 errors, 21 warnings, 0 messages)

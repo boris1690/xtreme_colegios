@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from geedmo.com/codecanyon/dropper/bootstrap2/portfolio.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jun 2015 03:46:51 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <!-- FontAwesomeIE7 support -->
+    <!--[if lte IE 7]>
+    <link href="assets/css/font-awesome-ie7.min.css" rel="stylesheet">
+    <![endif]-->
+    <link id="dropper-theme" href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+		.container {
+			max-width: 1170px;
+		}
+
+		/* Footer
+		 -------------------------------------------------- */
+
+		.footer {
+			text-align: center;
+			padding: 30px 0;
+			margin-top: 70px;
+			border-top: 1px solid #e5e5e5;
+			background-color: #f5f5f5;
+		}
+		.footer p {
+			margin-bottom: 0;
+			color: #777;
+		}
+		.footer-links {
+			margin: 10px 0;
+		}
+		.footer-links li {
+			display: inline;
+			padding: 0 2px;
+		}
+		.footer-links li:first-child {
+			padding-left: 0;
+		}
+
+		/* Dropper Gototop
+		 -------------------------------------------------- */
+
+		#gototop {
+			margin: -20px auto 20px;
+			border: 1px solid transparent;
+			line-height: 30px;
+			width: 30px;
+			height: 30px;
+			-webkit-box-shadow: inset 0 0 0 rgba(0,0,0,0);
+			-moz-box-shadow: inset 0 0 0 rgba(0,0,0,0);
+			box-shadow: inset 0 0 0 rgba(0,0,0,0);
+			-webkit-border-radius: 56px;
+			-moz-border-radius: 56px;
+			border-radius: 56px;
+			-webkit-transition: all .3s linear;
+			-moz-transition: all .3s linear;
+			transition: all .3s linear;
+		}
+		#gototop:hover {
+			-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.3), 0 1px 1px #fff;
+			-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.3), 0 1px 1px #fff;
+			box-shadow: inset 0 1px 2px rgba(0,0,0,.3), 0 1px 1px #fff;
+		}
+
+    </style>
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.html">
+    <link rel="shortcut icon" href="../assets/ico/favicon.html">
+    <script src="assets/js/ga.html"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <br />
+
+      <div class="navbar navbar-big">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+            <a class="brand" href="#">Project name</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav pull-right">
+                <li>
+                  <a href="home.html">Home<span class="nav-description">welcome!</span></a>
+                </li>
+                <li>
+                  <a href="about.html">About<span class="nav-description">who we are</span></a>
+                </li>
+                <li class="active">
+                  <a href="portfolio.html">Portfolio<span class="nav-description">our proud work</span></a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog<span class="nav-description">what we talk</span><b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="blog.html">Posts</a>
+                    </li>
+                    <li>
+                      <a href="blog-detail.html">Post Detail</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="contact.html">Contact<span class="nav-description">enquire here</span></a>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      <ul class="breadcrumb">
+        <li>
+          <a href="#">Home</a><span class="divider">/</span>
+        </li>
+        <li class="active">
+          Portfolio
+        </li>
+      </ul>
+
+      <br />
+
+      <h2> Porfolio</h2>
+      <hr>
+      <div class="pull-right">
+        <button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="all">
+          All
+        </button>
+        <button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="art">
+          Art
+        </button>
+        <button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="media">
+          Media
+        </button>
+        <button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="brand">
+          Brand
+        </button>
+      </div>
+      <div class="clearfix"></div>
+
+      <br />
+
+      <ul class="thumbnails gallery thumbnails-3d">
+        <li class="span3 clearfix" data-tag='brand'>
+          <div class="thumbnail">
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="span3" data-tag='art'>
+          <div class="thumbnail" >
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="span3" data-tag='media'>
+          <div class="thumbnail">
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="span3" data-tag='brand'>
+          <div class="thumbnail">
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="span3" data-tag='art'>
+          <div class="thumbnail" >
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="span3" data-tag='media'>
+          <div class="thumbnail">
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="span3 clearfix" data-tag='brand'>
+          <div class="thumbnail">
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="span3" data-tag='art'>
+          <div class="thumbnail">
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="span3" data-tag='art'>
+          <div class="thumbnail">
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="span3"  data-tag='brand'>
+          <div class="thumbnail">
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="span3"  data-tag='brand'>
+          <div class="thumbnail">
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+        <li class="span3" data-tag='brand'>
+          <div class="thumbnail" >
+            <img alt="180x120" data-src="holder.js/270x130" />
+            <div class="caption">
+              <h4>Project Name</h4>
+              <a href="#"><i class="icon-eye-open icon-white"></i></a>
+              <a href="#"><i class="icon-share-alt icon-white"></i></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <hr>
+
+      <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+
+        <div id="gototop" class="container">
+          <a href="#"><i class="icon-chevron-up"></i></a>
+        </div>
+
+        <div class="container">
+          <p>
+            Page footer.
+          </p>
+          <p>
+            2013 &copy; All rights reserved.
+          </p>
+        </div>
+      </footer>
+
+    </div>
+    <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/holder/holder.js"></script>
+
+  </body>
+
+<!-- Mirrored from geedmo.com/codecanyon/dropper/bootstrap2/portfolio.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jun 2015 03:46:51 GMT -->
+</html>

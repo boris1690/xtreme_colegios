@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+ahmad.works	TRUE	/bostan/	FALSE	1999999999	wordpress_test_cookie	WP+Cookie+check
+.google.com	TRUE	/	FALSE	1999999999	NID	68=lX8rhZPKp0lDSzUuxh9juTURBd5pNPKjr-FMChbughrZ0-OAhWGHiahpzBSoHx8lAfpJ1EhZVObd1lzWBfh7yvjZ4LTQAUl8I3IK0s9SUMeNWGinQZf34qh8sQzoXn1a
+.ahmad.works	TRUE	/	FALSE	1999999999	__cfduid	d82a5afdb4a2700e812494cb8aba5f66e1433909019
+

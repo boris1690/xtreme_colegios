@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from geedmo.com/codecanyon/plan/plan.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jun 2015 03:42:12 GMT -->
+<head>
+  <meta charset="utf-8">
+  <title>Plan - Flat Bootstrap 3 Skin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plan flat skin for Bootstrap">
+  <meta name="author" content="geedmo">
+  
+  <!-- Google Web Font -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,700,300italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Bootstrap 3 Plan styles -->
+  <link id="plan-theme" href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Plan UI -->
+  <link id="plan-theme-extra" href="assets/css/plan.min.css" rel="stylesheet">
+  <!-- Bootstrap Select -->
+  <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+  <!-- Vide JS -->
+  <link href="assets/css/video-js.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+    body {
+      padding-top: 120px;
+      padding-bottom: 0;
+    }
+
+    .row > [class*="col-"] {
+      margin-bottom: 30px;
+    }
+    .row.flush > [class*="col-"] {
+      margin-bottom: 0;
+    }
+
+    footer {
+      background-color: white;
+      border-top: 1px solid #ddd;
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    .input-group { margin-bottom: 10px;}
+
+    .btn-group .dropdown-menu {
+      max-height: 200px;
+      overflow: auto;      
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin: 0">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header navbar-right">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://codecanyon.net/item/plan-flat-bootstrap-skin/4840101?ref=geedmo">Plan <small class="text-muted">Flat bootstrap skin</small></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="bootstrap.html">Bootstrap</a>
+          </li>
+          <li class="active">
+            <a href="plan.html">Plan Extras</a>
+          </li>
+          <li>
+            <a href="uikit.html">UI Kit</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Color Swatches <b class="caret"></b></a>
+            <ul class="dropdown-menu" id="css-switcher">
+              <li><a href="#" rel="assets/css/bootstrap.amethyst.min.css,assets/css/plan.amethyst.min.css"><em class="fa fa-fw fa-square text-amethyst"></em> Amethyst</a></li>
+              <li><a href="#" rel="assets/css/bootstrap.carrot.min.css,assets/css/plan.carrot.min.css"><em class="fa fa-fw fa-square text-carrot"></em> Carrot</a></li>
+              <li><a href="#" rel="assets/css/bootstrap.greensea.min.css,assets/css/plan.greensea.min.css"><em class="fa fa-fw fa-square text-greensea"></em> Green Sea</a></li>
+              <li><a href="#" rel="assets/css/bootstrap.belizehole.min.css,assets/css/plan.belizehole.min.css"><em class="fa fa-fw fa-square text-belizehole"></em> Belize Hole</a></li>
+            </ul>
+          </li>          
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+
+
+    <div class="text-center">
+      <h1>Plan <small> / Extra Features</small></h1>
+    </div>
+
+    <!-- BASE CSS   =========================================================== -->
+
+    <!-- Tables -->
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h2>Tables</h2>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <p class="lead muted">Header with Color</p>
+            <table class="table table-striped header-primary">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>          
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <p class="lead muted">Bordered with Color</p>
+            <table class="table table-bordered bordered-primary">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2">1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@TwBootstrap</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="docbox">
+              <p>Add class <code>.header-primary</code> to your table. <br>
+                Standard bootstrap colors are supported too, like <code>.header-danger</code>, <code>.header-success</code>, etc.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <p>Add class <code>.bordered-primary</code> to your table.<br>Standard bootstrap colors are supported too, like <code>.bordered-danger</code>, <code>.bordered-success</code>, etc.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forms -->
+
+    <div class="row">
+
+      <!-- Controls -->
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h2>Form Controls</h2>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <p class="lead muted">Icons on inputs</p>
+            <div class="input-group input-icon">
+              <span class="input-group-addon"><em class="fa fa-search fa-fw"></em></span>
+              <input class="form-control" id="prependedInput" type="text" placeholder="Search..">
+            </div>
+            <div class="input-group input-icon">
+              <input class="form-control" id="appendedInput" type="text" placeholder="Search..">
+              <span class="input-group-addon"><em class="fa fa-search fa-fw"></em></span>
+            </div>
+            <div class="input-group input-icon">
+              <span class="input-group-addon"><em class="fa fa-user fa-fw"></em></span>
+              <input class="form-control" id="appendedPrependedInput" type="text" placeholder="Username search..">
+              <span class="input-group-addon"><em class="fa fa-search fa-fw"></em></span>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 ">
+            <p class="lead muted">Toggles</p>
+            <div class="row">
+              <!-- Toggle rounded default -->
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <!-- Toggle -->
+                <div class="toggle">
+                  <em class="fa fa-circle fa-fw"></em>
+                  <label class="toggle-on">
+                    SI
+                    <input type="radio" value="" name="toggle1">
+                  </label>
+                  <label class="toggle-off">
+                     NO
+                    <input type="radio" value="" name="toggle1" checked>
+                  </label>
+                </div>
+                <!-- Toggle -->
+                <div class="toggle on">
+                  <em class="fa fa-circle fa-fw"></em>
+                  <label class="toggle-on">
+                    SI
+                    <input type="radio" value="" name="toggle2" checked>
+                  </label>
+                  <label class="toggle-off">
+                     NO
+                    <input type="radio" value="" name="toggle2">
+                  </label>
+                </div>
+                <!-- Toggle -->
+                <div class="toggle disabled">
+                  <em class="fa fa-circle fa-fw"></em>
+                  <label class="toggle-on">
+                    SI
+                    <input type="radio" value="" name="toggle3">
+                  </label>
+                  <label class="toggle-off">
+                     NO
+                    <input type="radio" value="" name="toggle3">
+                  </label>
+                </div>
+                <!-- Toggle -->
+                <div class="toggle on disabled">
+                  <em class="fa fa-circle fa-fw"></em>
+                  <label class="toggle-on">
+                    SI
+                    <input type="radio" value="" name="toggle4">
+                  </label>
+                  <label class="toggle-off">
+                     NO
+                    <input type="radio" value="" name="toggle4">
+                  </label>
+                </div>                
+              </div>
+              <!-- Toggle square -->
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <!-- Toggle -->
+                <div class="toggle toggle-square">
+                  <em class="fa fa-square fa-fw"></em>
+                  <label class="toggle-on">
+                    SI
+                    <input type="radio" value="" name="toggle5">
+                  </label>
+                  <label class="toggle-off">
+                     NO
+                    <input type="radio" value="" name="toggle5">
+                  </label>
+                </div>
+                <!-- Toggle -->
+                <div class="toggle toggle-square on">
+                  <em class="fa fa-square fa-fw"></em>
+                  <label class="toggle-on">
+                    SI
+                    <input type="radio" value="" name="toggle6">
+                  </label>
+                  <label class="toggle-off">
+                     NO
+                    <input type="radio" value="" name="toggle6">
+                  </label>
+                </div>      
+                <!-- Toggle -->          
+                <div class="toggle toggle-square disabled">
+                  <em class="fa fa-square fa-fw"></em>
+                  <label class="toggle-on">
+                    SI
+                    <input type="radio" value="" name="toggle7">
+                  </label>
+                  <label class="toggle-off">
+                     NO
+                    <input type="radio" value="" name="toggle7">
+                  </label>
+                </div>  
+                <!-- Toggle -->
+                <div class="toggle toggle-square on disabled">
+                  <em class="fa fa-square fa-fw"></em>
+                  <label class="toggle-on">
+                    SI
+                    <input type="radio" value="" name="toggle7">
+                  </label>
+                  <label class="toggle-off">
+                     NO
+                    <input type="radio" value="" name="toggle7">
+                  </label>
+                </div>  
+              </div>
+              <!-- Toggle custom icons colors -->
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <!-- Toggle -->
+                <div class="toggle toggle-square toggle-danger on">
+                  <em class="fa fa-square fa-fw"></em>
+                  <label class="toggle-on">
+                    <em class="fa fa-check"></em>
+                    <input type="radio" value="" name="toggle8">
+                  </label>
+                  <label class="toggle-off">
+                     <em class="fa fa-times"></em>
+                    <input type="radio" value="" name="toggle8">
+                  </label>
+                </div>
+                <!-- Toggle -->
+                <div class="toggle toggle-square toggle-info on">
+                  <em class="fa fa-square fa-fw"></em>
+                  <label class="toggle-on">
+                    <em class="fa fa-twitter"></em>
+                    <input type="radio" value="" name="toggle9">
+                  </label>
+                  <label class="toggle-off">
+                     <em class="fa fa-facebook"></em>
+                    <input type="radio" value="" name="toggle9">
+                  </label>
+                </div>      
+                <!-- Toggle -->          
+                <div class="toggle toggle-warning on ">
+                  <em class="fa fa-circle fa-fw"></em>
+                  <label class="toggle-on">
+                    <em class="fa fa-heart"></em>
+                    <input type="radio" value="" name="toggle10">
+                  </label>
+                  <label class="toggle-off">
+                     <em class="fa fa-heart-o"></em>
+                    <input type="radio" value="" name="toggle10">
+                  </label>
+                </div>  
+                <!-- Toggle -->
+                <div class="toggle toggle-success on ">
+                  <em class="fa fa-circle fa-fw"></em>
+                  <label class="toggle-on ">
+                    <em class="fa fa-desktop"></em>
+                    <input type="radio" value="" name="toggle11">
+                  </label>
+                  <label class="toggle-off">
+                     <em class="fa fa-mobile-phone"></em>
+                    <input type="radio" value="" name="toggle11">
+                  </label>
+                </div>  
+              </div>
+            </div>
+          </div>
+          <!-- Dropdown select -->
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <p class="lead muted">Dropdown Select</p>
+            <p>
+              <select name="" class="selectpicker form-control">
+                <option value="Choose" selected>Choose</option>
+                <option value="val1">val1</option>
+                <option value="val2">val2</option>
+                <option value="val3">val3</option>
+              </select>
+            </p>
+            <p>
+              <select name="" id="" class="selectpicker form-control" data-style="btn-primary btn-lg">
+                <option value="">Choose</option>
+                <option value="">val1</option>
+                <option value="">val2</option>
+                <option value="">val3</option>
+              </select>
+            </p>   
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="docbox">
+              <p>Add class <code>.input-icon</code> to any <code>.input-group</code></p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="docbox">
+              <p>
+                <code>.toggle.on</code>: activates the toggle<br>
+                <code>.toggle.toggle-square</code>: make toggle square<br>
+                <code>.toggle.toggle-color</code>: replace color with any bootstrap standard (primary, danger, info, etc)
+              </p>
+              <p>Markup</p>
+              <pre>
+  &lt;div class="toggle">
+    &lt;em class="fa fa-circle fa-fw">&lt;/em>
+    &lt;label class="toggle-on">
+      SI
+      &lt;input type="radio" value="" name="toggle">
+    &lt;/label>
+    &lt;label class="toggle-off">
+       NO
+      &lt;input type="radio" value="" name="toggle">
+    &lt;/label>
+  &lt;/div>              
+              </pre>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="docbox">
+              <p>Create a select and add attribute <code>data-toggle="dropdown-select"</code></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- Buttons -->
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h2>Buttons</h2>
+        <div class="row">
+          <!-- icon buttons -->
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <p class="lead muted">With icons</p>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <p>
+                  <button type="button" class="btn btn-lg btn-primary btn-icon"><em class="fa fa-twitter fa-fw"></em> Large button</button>
+                </p>
+                <p>
+                  <button type="button" class="btn btn-primary btn-icon"><em class="fa fa-twitter fa-fw"></em> Default button</button>
+                </p>
+                <p>
+                  <button type="button" class="btn btn-sm btn-primary btn-icon"><em class="fa fa-twitter fa-fw"></em> Small button</button>
+                </p>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <p class="text-right">
+                  <button type="button" class="btn btn-lg btn-primary btn-icon">Large button <em class="fa fa-twitter fa-fw"></em></button>
+                </p>
+                <p class="text-right">
+                  <button type="button" class="btn btn-primary btn-icon">Default button <em class="fa fa-twitter fa-fw"></em></button>
+                </p>
+                <p class="text-right">
+                  <button type="button" class="btn btn-sm btn-primary btn-icon">Small button <em class="fa fa-twitter fa-fw"></em></button>
+                </p>
+              </div>
+            </div>
+          </div>          
+          <!-- social buttons -->
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <p class="lead muted">Social</p>
+            <p>
+              <button type="button" class="btn btn-icon btn-facebook"><em class="fa fa-facebook"></em> Facebook</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-icon btn-twitter"><em class="fa fa-twitter"></em> Twitter</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-icon btn-google"><em class="fa fa-google-plus"></em> Google</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-icon btn-rss"><em class="fa fa-rss"></em> RSS</button>
+            </p>
+          </div>
+          <!-- turnable buttons -->
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+            <p class="lead muted">Turnable</p>
+            <p>
+              <button type="button" class="btn btn-default btn-turn-primary">Turn Primary</button>
+              <button type="button" class="btn btn-default btn-turn-info">Turn Info</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-default btn-turn-success">Turn Success</button>
+              <button type="button" class="btn btn-default btn-turn-warning">Turn Warning</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-default btn-turn-danger">Turn Danger</button></td>
+            </p>
+          </div>
+          <!-- transparent buttons -->
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+            <p class="lead muted">Transparents</p>
+            <p>
+              <button type="button" class="btn btn-transparent btn-primary">Primary</button>
+              <button type="button" class="btn btn-transparent btn-info">Info</button>
+              <button type="button" class="btn btn-transparent btn-success">Success</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-transparent btn-warning">Warning</button>
+              <button type="button" class="btn btn-transparent btn-danger">Danger</button>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="docbox">
+              <p>Include an icon and add class <code>.btn-icon</code> to a <code>.btn</code> to create a buttons with the same padding for icon alignment</p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2">
+            <div class="docbox"></div>
+            <p>Append the following classes to a <code>.btn</code>for social buttons</p>
+            <pre>
+.btn-facebook
+.btn-twitter
+.btn-google
+.btn-icon
+            </pre>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="docbox">
+            <p>Append the following classes to a default <code>.btn</code> to turn it into another color on hover</p>
+            <pre>
+.btn-turn-primary
+.btn-turn-danger
+.btn-turn-warning
+.btn-turn-info
+.btn-turn-success
+.btn-turn-inverse
+            </pre>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="docbox">
+              <p>Add class <code>.btn-transparent</code> to any <code>.btn</code> to make the bakcground transparent</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPONENTS =========================================================== -->
+    
+    <!-- Navs -->
+    
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <h2>Navs Stacked</h2>
+        <div class="row">
+          <!-- spaced -->
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <p class="lead muted">Stacked &amp; Spaced</p>
+            <ul class="nav nav-stacked nav-spaced">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Messages</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </div>
+          <!-- labeled -->
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <p class="lead muted">Stacked &amp; Labeled</p>
+            <ul class="nav nav-stacked nav-spaced">
+              <li class="active">
+                <a href="#">Inbox <span class="label label-default pull-right">120</span></a>
+              </li>
+              <li>
+                <a href="#">Spam <span class="label label-default pull-right">0</span></a>
+              </li>
+              <li>
+                <a href="#">Unread <span class="label label-default pull-right">5</span></a>
+              </li>
+              <li>
+                <a href="#">Task <span class="label label-default pull-right">10</span></a>
+              </li>
+            </ul>
+          </div>
+          <!-- pills with icons -->
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <p class="lead muted">Pills with Icons</p>
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active">
+                <a href="#">Home <em class="fa fa-home pull-right"></em></a>
+              </li>
+              <li>
+                <a href="#">Profile <em class="fa fa-angle-right pull-right"></em></a>
+              </li>
+              <li>
+                <a href="#">Messages <em class="fa fa-angle-right pull-right"></em></a>
+              </li>
+              <li>
+                <a href="#">Logout <em class="fa fa-signout pull-right"></em></a>
+              </li>
+            </ul>            
+          </div>
+          <!-- toggles-->
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <p class="lead muted">Stacked Tabs with Toggles</p>
+
+            <ul class="nav nav-tabs nav-stacked">
+              <li><a href="#">Firefox
+                    <div class="toggle on">
+                      <em class="fa fa-circle fa-fw"></em>
+                      <label class="toggle-on">
+                        YES
+                        <input type="radio" value="" name="toggle">
+                      </label>
+                      <label class="toggle-off">
+                         NO
+                        <input type="radio" value="" name="toggle">
+                      </label>
+                    </div>
+              </a></li>
+              <li><a href="#">Chrome
+                    <div class="toggle on">
+                      <em class="fa fa-circle fa-fw"></em>
+                      <label class="toggle-on">
+                        YES
+                        <input type="radio" value="" name="toggle">
+                      </label>
+                      <label class="toggle-off">
+                         NO
+                        <input type="radio" value="" name="toggle">
+                      </label>
+                    </div>
+              </a></li>
+              <li><a href="#">Opera
+                    <div class="toggle on">
+                      <em class="fa fa-circle fa-fw"></em>
+                      <label class="toggle-on">
+                        YES
+                        <input type="radio" value="" name="toggle">
+                      </label>
+                      <label class="toggle-off">
+                         NO
+                        <input type="radio" value="" name="toggle">
+                      </label>
+                    </div>
+              </a></li>
+              <li><a href="#">IE
+                    <div class="toggle on">
+                      <em class="fa fa-circle fa-fw"></em>
+                      <label class="toggle-on">
+                        YES
+                        <input type="radio" value="" name="toggle">
+                      </label>
+                      <label class="toggle-off">
+                         NO
+                        <input type="radio" value="" name="toggle">
+                      </label>
+                    </div>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="docbox">
+              <p>Add class <code>.nav-spaced</code> to any <code>.nav-stacked</code></p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="docbox">
+              <p>Add a <code>span</code> inside the <code>a</code> and add to it the classes <code>.label.pull-right</code></p>
+              <p>Markup Example</p>
+              <pre>
+...
+&lt;a href="#">
+  Inbox 
+  &lt;span class="label pull-right">
+    120
+  &lt;/span>
+&lt;/a>
+...
+              </pre>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="docbox">
+              <p>Add an <code>em</code> with any <code>.fa fa-*</code> class inside the <code>a</code> and add to it class <code>.pull-right</code></p>
+              <p>Markup Example</p>
+              <pre>
+...
+&lt;a href="#">
+  Profile
+  &lt;em class="fa fa-angle-right pull-right">&lt;/em>
+&lt;/a>
+...
+              </pre>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="docbox">
+              <p>Include the Toggle markup insde the <code>a</code> tag in a <code>.nav-stacked</code> list and the toggles will be automatically right aligned</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <h2>Radial Progress Bars</h2>
+    <br>
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <div class="progress-radial ">
+                <div class="overlay">
+                    <p>100%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <div class="progress-radial progress-75 ">
+                <div class="overlay">
+                    <p>75%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <div class="progress-radial progress-50">
+                <div class="overlay">
+                    <p>50%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <div class="progress-radial progress-25">
+                <div class="overlay">
+                    <p>25%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <div class="progress-radial progress-10 ">
+                <div class="overlay">
+                    <p>10%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
+            <div class="progress-radial progress-90">
+                <div class="overlay">
+                    <p>90%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="docbox">
+          <p>Markup</p>
+<pre>
+&lt;div class="progress-radial progress-10 ">
+    &lt;div class="overlay">
+        &lt;p>10%&lt;/p>
+    &lt;/div>
+&lt;/div>  
+</pre>
+        </div>
+      </div>
+      <div class="span8">
+        <p>Usage</p>
+        Add class <code>.progress-radial</code> to a <code>div</code> container<br>
+        Insde add another <code>div</code> with class <code>overlay</code> and set the text to show in the center.<br>
+        Use class <code>.progress-X</code> to set the percentage progress.  Default is 100%.
+        <br>
+        <br>
+        <p><span class="label label-info">Important</span> Due to the advance usage of stripped gradient this element works only in modern browsers. IE9 and below shows a circle or square at 100%.</p>
+      </div>
+    </div>
+    <!-- Thumbnails -->
+    <h2>Flush Rows</h2>
+    <div class="row flush">
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="#" >
+          <img class="img-responsive" src="assets/img/image-placeholder.png" alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="#" >
+          <img class="img-responsive" src="assets/img/image-placeholder.png" alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="#" >
+          <img class="img-responsive" src="assets/img/image-placeholder.png" alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="#" >
+          <img class="img-responsive" src="assets/img/image-placeholder.png" alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="#" >
+          <img class="img-responsive" src="assets/img/image-placeholder.png" alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="#" >
+          <img class="img-responsive" src="assets/img/image-placeholder.png" alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="#" >
+          <img class="img-responsive" src="assets/img/image-placeholder.png" alt="">
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <a href="#" >
+          <img class="img-responsive" src="assets/img/image-placeholder.png" alt="">
+        </a>
+      </div>
+    </div>  
+    <br>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="docbox">
+          <p>Add class <code>.flush</code> to any <code>.row</code> to <b>remove padding and margins</b>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- HTML5 Video -->
+      <div class="col-lg-6 col-md-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
+        <h2 class="text-center">HTML5 Video <small>by Video.JS</small></h2>
+          <!-- Respect the ID name to use the responsive feature -->
+          <video 
+              id="video-id" 
+              class="video-js vjs-flat-skin" 
+              controls preload="auto"  
+              poster="../../envato/videos/big-buck-bunny_poster.jpg" 
+              data-setup="{}">
+              <!-- Video sources -->
+              <source src="../../envato/videos/big_buck_bunny.mp4" type="video/mp4" />
+              <source src="../../envato/videos/big_buck_bunny.webm" type="video/webm" />
+              <!-- A tag where video is not supported -->
+              <p>Video not supported</p>
+          </video>
+          <br>
+          <p>
+            Add a <code>video</code> tag with classes <code>video-js vjs-flat-skin</code> to invoke video.js with a flat skin.<br>
+            Optionally include the file <code>responsive.video.js</code> to make your videos responsive for any device.
+          </p>
+      </div>
+    
+    </div>
+
+
+
+  </div> <!-- /container -->
+  
+  <footer class="text-center">
+    <p>
+      Powered by <a href="http://twitter.github.io/bootstrap/">Bootstrap</a>
+       | Made by <a href="http://codecanyon.net/user/geedmo/portfolio">Geedmo</a></p>
+  </footer>
+  
+  <!-- jQuery CDN and fallback -->
+  <script src="../../../code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/jquery.js">\x3C/script>')</script>
+  
+  <!-- Main Scripts-->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Video -->
+  <script src="assets/js/video.js"></script>
+  <script src="assets/js/responsive.video.js"></script>
+  <!-- Plan UI elements -->
+  <script src="assets/js/plan.ui.js"></script>
+  <!-- PlaceHolder fallback -->
+  <script src="assets/js/jquery.placeholder.js"></script>
+
+  <!-- Bootstrap Select -->
+  <script src="assets/js/bootstrap-select.min.js"></script>
+  
+  <!-- Demo -->
+  <script src="assets/js/application.js"></script>
+
+</body>
+
+<!-- Mirrored from geedmo.com/codecanyon/plan/plan.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jun 2015 03:42:18 GMT -->
+</html>
