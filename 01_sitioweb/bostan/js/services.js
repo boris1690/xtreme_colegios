@@ -1,8 +1,8 @@
 (function () {
 
-  angular.module('pokedex.services', [])
+  angular.module('xtreme.services', [])
 
-    .factory('pokemonService', ['$http', '$q', '$filter', '$window', function ($http, $q, $filter, $window) {
+    .factory('blogzService', ['$http', '$q', '$filter', '$window', function ($http, $q, $filter, $window) {
       var normalize = $filter('normalize');
       var localStorage = $window.localStorage;
 

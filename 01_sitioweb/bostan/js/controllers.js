@@ -1,7 +1,7 @@
 (function (_) {
 
   angular.module('xtreme.controllers', [])
-    .controller('IndexController', ['$scope', '$routeParams', 'pokemonService', function ($scope, $routeParams, pokemonService) {
+    .controller('IndexController', ['$scope', '$routeParams', 'blogService', function ($scope, $routeParams, pokemonService) {
       //var type = $routeParams.type;
 
       /*if (type) {

@@ -11,7 +11,12 @@
 |
 */
 
-Route::get('/', function()
+/*Route::get('/', function()
 {
 	return View::make('hello');
-});
+});*/
+
+Route::resource('blogs','WebblogController');
+
+Route::resource('generic/{table}/get', 'GenericController@performance');
+Route::resource('generic/{table}/id/{id}', 'GenericController@show');
