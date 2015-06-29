@@ -1,7 +1,7 @@
 (function (_) {
 
   angular.module('xtreme.controllers', [])
-    .controller('IndexController', ['$scope', '$routeParams', 'blogService', function ($scope, $routeParams, pokemonService) {
+    .controller('IndexController', ['$scope', '$routeParams', 'xtremeService', function ($scope, $routeParams, xtremeService) {
       //var type = $routeParams.type;
 
       /*if (type) {
@@ -18,12 +18,22 @@
         });
       }
 
+    */
 
       function partition(data, n) {
         return _.chain(data).groupBy(function (element, index) {
           return Math.floor(index / n);
         }).toArray().value();
-      }*/
+      }
+
+
+          xtremeService.all().then(function (data){
+
+              $scope.blogs = data;
+              $scope.groupped = partition(data, 4);
+
+          })
+
 
     }])
 

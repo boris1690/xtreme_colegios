@@ -2,14 +2,15 @@
 
   angular.module('xtreme.services', [])
 
-    .factory('blogzService', ['$http', '$q', '$filter', '$window', function ($http, $q, $filter, $window) {
+    .factory('xtremeService', ['$http', '$q', '$filter', '$window', function ($http, $q, $filter, $window) {
+
       var normalize = $filter('normalize');
       var localStorage = $window.localStorage;
 
       function all() {
         var deferred = $q.defer();
 
-        $http.get('/pokemons.json')
+        $http.get('http://api.xtreme.colegiosweb/blogs')
           .success(function (data) {
             deferred.resolve(data);
           });

@@ -1,0 +1,21 @@
+<div class="the_blog_post" ng-repeat="blog in blogs|limitTo:2">
+    <div class="post_date_thumbnail">
+        <a href="this-is-a-gallery-post/index.html"
+           title="This is a Gallery Post">
+            <img width="520" height="337"
+                 src="wp-content/uploads/2013/05/photodune-344850-graduate-in-hallway-m-1-520x337.jpg"
+                 class="attachment-portfolio wp-post-image"
+                 alt="Graduate In Hallway"/>
+        </a>
+    </div>
+    <div class="post_details">
+        <div class="blog_title"><a href="this-is-a-gallery-post/index.html">
+            <h4>{{blog.blog_nombre}}</h4></a></div>
+        <div class="blog_title">{{blog.blog_descripcion}}
+        </div>
+        <div class="read_more_link"><a
+                href="this-is-a-gallery-post/index.html">Read more ...</a>
+        </div>
+    </div>
+</div>
+</div>

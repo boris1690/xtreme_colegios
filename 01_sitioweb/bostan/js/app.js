@@ -2,7 +2,11 @@
 
   var app = angular.module('xtreme', [
       'ngRoute',
-      'xtreme.controllers'
+      'xtreme.controllers',
+      'xtreme.directives',
+      'xtreme.filters',
+      'xtreme.services'
+
   ]);
 
   app.config(['$routeProvider', function ($routeProvider) {

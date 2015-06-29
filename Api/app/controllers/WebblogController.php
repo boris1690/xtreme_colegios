@@ -17,12 +17,41 @@ class WebblogController extends BaseController {
 
 	public function index()
 	{
-        return Webblog::all();
+        try {
+            $statusCode = 200;
+            $message = "OK";
+            $response = Webblog::all();
+
+        } catch (Exception $e) {
+            $statusCode = 400;
+            $message = $e->getMessage();
+            $response['status'] = $statusCode;
+            $response['message'] = $message;
+        }
+
+
+
+        return Response::json($response, $statusCode);
+
 	}
 
     public function show($id)
     {
-        return Webblog::find($id);
+        try {
+            $statusCode = 200;
+            $message = "OK";
+            $response = Webblog::find($id);
+
+        } catch (Exception $e) {
+            $statusCode = 400;
+            $message = $e->getMessage();
+            $response['status'] = $statusCode;
+            $response['message'] = $message;
+        }
+
+
+
+        return Response::json($response, $statusCode);
     }
 
     public function store()

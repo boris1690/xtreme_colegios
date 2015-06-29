@@ -17,31 +17,50 @@ class GenericController extends Controller {
 
 
 
-    public function show($table,$id)
+    public function show($jsontable,$jsonid)
     {
+        $arraytable = json_decode($jsontable,true);
+        $arrayid = json_decode($jsonid,true);
+
+
         try {
-            $statusCode = 200;
-            $response = DB::table($table)->select('*')->where('id', $id)->get();
+            foreach(array_combine($arraytable['tables'],$arrayid["id"]) as $table => $id) {
+                $statusCode = 200;
+                $message = "OK";
+                $response[$table] = DB::table($table)->select('*')->where('estado', 'A')->where('id', $id)->get();
+                $response[$table]['status'] = $statusCode;
+                $response[$table]['message'] = $message;
+            }
+
         } catch (Exception $e) {
             $statusCode = 400;
+            $message = $e->getMessage();
+
+            $response['status'] = $statusCode;
+            $response['message'] = $message;
         }
 
         return Response::json($response, $statusCode);
-
-
     }
 
-    public function performance($table)
+    public function performance($jsontable)
     {
-        try {
-            $statusCode = 200;
+        $array = json_decode($jsontable,true);
 
-            $response = DB::table($table)->select('*')->get();
-        } catch (Exception $e) {
-            $statusCode = 400;
+        foreach($array['tables'] as $item) {
+            try {
+                $statusCode = 200;
+                $message = "OK";
+                $response[$item] = DB::table($item)->select('*')->where('estado','A')->get();
+
+            } catch (Exception $e) {
+                $statusCode = 400;
+                $message = $e->getMessage();
+            }
+
+            $response[$item]['status'] = $statusCode;
+            $response[$item]['message'] = $message;
         }
-
-        $response['status'] = $statusCode;
 
         return Response::json($response, $statusCode);
 

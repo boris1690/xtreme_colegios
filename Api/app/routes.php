@@ -16,7 +16,13 @@
 	return View::make('hello');
 });*/
 
+Route::filter('cors', function($route, $request, $response)
+{
+    $response->headers->set('Access-Control-Allow-Origin', '*');
+    return $response;
+});
+
 Route::resource('blogs','WebblogController');
 
-Route::resource('generic/{table}/get', 'GenericController@performance');
+Route::resource('generic', 'GenericController@performance');
 Route::resource('generic/{table}/id/{id}', 'GenericController@show');

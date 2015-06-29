@@ -1,10 +1,10 @@
 (function () {
 
-  angular.module('pokedex.directives', [])
-    .directive('pokemonName', function () {
+  angular.module('xtreme.directives', [])
+    .directive('xtremeBlog', function () {
       return {
         restrict: 'E',
-        templateUrl: 'partials/pokemon-name.html'
+        templateUrl: 'partials/xtreme-blog.html'
       };
     })
 

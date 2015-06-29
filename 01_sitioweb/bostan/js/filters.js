@@ -1,6 +1,6 @@
 (function () {
 
-  angular.module('pokedex.filters', [])
+  angular.module('xtreme.filters', [])
     .filter('normalize', function () {
       return function (input) {
           if (!input) return "";
