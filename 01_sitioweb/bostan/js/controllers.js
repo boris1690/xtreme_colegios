@@ -34,25 +34,19 @@
 
           })
 
+          $scope.tipo="1";
+
 
     }])
+    .controller('BlogController', ['$scope', '$routeParams', 'xtremeService', function ($scope, $routeParams, xtremeService) {
 
-    .controller('PokemonController', ['$scope', '$routeParams', 'pokemonService', function ($scope, $routeParams, pokemonService) {
       var name = $routeParams.name;
-      $scope.pokemon = {};
+      $scope.blogs = {};
 
-      pokemonService.byName(name)
+      xtremeService.byName(name)
       .then(function (data) {
-        $scope.pokemon = data;
+        $scope.blogs = data;
       });
-    }])
-
-    .controller('TabsController', function () {
-      this.tab = 1;
-
-      this.selectTab = function (tab) {
-        this.tab = tab;
-      };
-    });
+    }]);
 
 })(_);

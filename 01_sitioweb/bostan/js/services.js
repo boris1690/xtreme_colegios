@@ -24,8 +24,8 @@
         var deferred = $q.defer();
 
         all().then(function (data) {
-          var results = data.filter(function (pokemon) {
-            return normalize(pokemon.name) === name;
+          var results = data.filter(function (blog) {
+            return normalize(blog.blog_nombre) === name;
           });
 
           if (results.length > 0) {
@@ -33,6 +33,7 @@
           } else {
             deferred.reject();
           }
+
 
         });
 

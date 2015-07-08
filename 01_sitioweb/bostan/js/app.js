@@ -16,13 +16,9 @@
         templateUrl: 'views/index.html',
         controller: 'IndexController'
       })
-      .when('/:type', {
-        templateUrl: 'views/pokedex.html',
-        controller: 'PokedexController'
-      })
-      .when('/pokemon/:name', {
-        templateUrl: 'views/pokemon.html',
-        controller: 'PokemonController'
+      .when('/articulo/:name', {
+        templateUrl: 'views/blog.html',
+        controller: 'BlogController'
       })
       .otherwise({
         redirectTo: '/'

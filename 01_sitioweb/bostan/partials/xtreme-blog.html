@@ -1,4 +1,4 @@
-<div class="the_blog_post" ng-repeat="blog in blogs|limitTo:2">
+<div ng-if="tipo==1" class="the_blog_post" ng-repeat="blog in blogs|limitTo:4">
     <div class="post_date_thumbnail">
         <a href="this-is-a-gallery-post/index.html"
            title="This is a Gallery Post">
@@ -14,8 +14,13 @@
         <div class="blog_title">{{blog.blog_descripcion}}
         </div>
         <div class="read_more_link"><a
-                href="this-is-a-gallery-post/index.html">Read more ...</a>
+                href="/#articulo/{{blog.blog_nombre | normalize}}">Read more ...</a>
+
         </div>
     </div>
 </div>
+</div>
+
+<div ng-if="tipo==2" class="the_blog_post" ng-repeat="blog in blogs|limitTo:4">
+    dos
 </div>
