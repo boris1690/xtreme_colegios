@@ -2,14 +2,174 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfb7c776-3627-41e6-be36-9ee2e678b097" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/01_sitioweb/bostan/images/x-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/01_sitioweb/bostan/views/blog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_sitioweb/bostan/js/app.js" afterPath="$PROJECT_DIR$/01_sitioweb/bostan/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_sitioweb/bostan/js/controllers.js" afterPath="$PROJECT_DIR$/01_sitioweb/bostan/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_sitioweb/bostan/index.html" afterPath="$PROJECT_DIR$/01_sitioweb/bostan/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_sitioweb/bostan/js/services.js" afterPath="$PROJECT_DIR$/01_sitioweb/bostan/js/services.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/user/01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/user/02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/user/03.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/user/04.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/user/05.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/user/06.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/user/07.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/user/08.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/user/09.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/user/10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/user/11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/app-chart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/app-mobile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/app-multi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/app-widget.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/bg1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/bg10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/bg2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/bg3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/bg4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/bg5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/bg6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/bg7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/bg8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/bg9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/clients/bootstrap.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/callout.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/chosen/chosen-sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/chosen/chosen-sprite@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/dummy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/fontawesome/fonts/fontawesome-webfont78ce.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/fontawesome/fonts/fontawesome-webfont78ce.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/fontawesome/fonts/fontawesome-webfont78ce.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/fontawesome/fonts/fontawesome-webfontd41d.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/clients/gulp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/iphone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/clients/jade.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/clients/jquery.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/clients/less.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/lock-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/logo-single.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/mb-sample.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/clients/node.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datatable/extensions/datatable-bootstrap/images/sort_asc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datatable/extensions/datatable-bootstrap/images/sort_asc_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datatable/extensions/datatable-bootstrap/images/sort_both.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datatable/extensions/datatable-bootstrap/images/sort_desc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datatable/extensions/datatable-bootstrap/images/sort_desc_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/store-apple.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/img/landing/store-google.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-icons_228ef1_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-icons_ef8c08_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-icons_ffd27a_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/animo/animate+animo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/animations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/animo/animo.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/css/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datetimepicker/css/bootstrap-datetimepicker.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datetimepicker/js/bootstrap-datetimepicker.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/filestyle/bootstrap-filestyle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/slider/js/bootstrap-slider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/tagsinput/bootstrap-tagsinput.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/tagsinput/bootstrap-tagsinput.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/button.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/wizard/js/bwizard.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/calendar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/chart-flot.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/chart-radial.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/chosen/chosen.jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/chosen/chosen.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/codemirror/lib/codemirror.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/codemirror/lib/codemirror.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/css/common.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/csspinner/csspinner.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/dashboard-profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/dashboard-sidebar2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/dashboard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datatable/extensions/datatable-bootstrap/css/dataTables.bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datatable/extensions/datatable-bootstrap/js/dataTables.bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datatable/extensions/datatable-bootstrap/js/dataTables.bootstrapPagination.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datatable/extensions/ColVis/css/dataTables.colVis.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datatable/extensions/ColVis/js/dataTables.colVis.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/dropdown-animations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/fastclick/fastclick.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/filebox.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/fontawesome/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/fontawesome/fonts/fontawesome-webfont78ce.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/form-extended.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/form-standard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/form-validation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/form-wizard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/fullcalendar/fullcalendar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/fullcalendar/fullcalendar.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/fullcalendar/fullcalendar.print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/ga.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/codemirror/mode/gfm/gfm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/grid-masonry.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/grid.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/icons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/invoice.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jvectormap/jquery-jvectormap-1.2.2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jvectormap/jquery-jvectormap-1.2.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jvectormap/maps/jquery-jvectormap-world-mill-en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jqueryui/js/jquery-ui-1.10.4.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/classyloader/js/jquery.classyloader.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/datatable/media/js/jquery.dataTables.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/flot/jquery.flot.categories.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/flot/jquery.flot.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/flot/jquery.flot.pie.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/flot/jquery.flot.resize.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/flot/jquery.flot.time.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/flot/jquery.flot.tooltip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/gmap/jquery.gmap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/inputmask/jquery.inputmask.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/jquery/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/slimscroll/jquery.slimscroll.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/sparklines/jquery.sparkline.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/touch-punch/jquery.ui.touch-punch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/css/landing.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/pages/landing.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/pages/lock.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/pages/login-multi.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/pages/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/mailbox.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/maps-google.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/maps-vector.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/codemirror/mode/markdown/markdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/marked/marked.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/modernizr/modernizr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/moment/min/moment-with-langs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/notifications.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/codemirror/addon/mode/overlay.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/app/js/pages.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/panels.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/parsley/parsley.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/portlets.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/pages/recover.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/search.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/pages/signup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/slider/css/slider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/spinners.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/store/store+json2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/table-datatable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/table-extended.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/table-standard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/template.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/timeline.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/typo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/widgets.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/02_admin/vendor/codemirror/mode/xml/xml.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_sitioweb/bostan/partials/xtreme-blog.html" afterPath="$PROJECT_DIR$/01_sitioweb/bostan/partials/xtreme-blog.html" />
     </list>
     <ignored path="xtreme_colegios.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +197,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_sitioweb/bostan/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.230769" vertical-offset="11550" max-vertical-offset="15589">
+            <state vertical-scroll-proportion="0.0" vertical-offset="11550" max-vertical-offset="15589">
               <caret line="692" column="37" selection-start-line="692" selection-start-column="37" selection-end-line="692" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
@@ -80,7 +240,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_sitioweb/bostan/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.884615" vertical-offset="10649" max-vertical-offset="13464">
+            <state vertical-scroll-proportion="0.0" vertical-offset="10649" max-vertical-offset="13464">
               <caret line="640" column="58" selection-start-line="640" selection-start-column="58" selection-end-line="640" selection-end-column="58" />
               <folding>
                 <marker date="1436297689939" expanded="true" signature="1059:1178" placeholder="..." />
@@ -92,7 +252,7 @@
       <file leaf-file-name="xtreme-blog.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_sitioweb/bostan/partials/xtreme-blog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="527">
+            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="527">
               <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
               <folding />
             </state>
@@ -102,7 +262,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_sitioweb/bostan/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+            <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="595">
               <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding />
             </state>
@@ -112,7 +272,7 @@
       <file leaf-file-name="directives.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_sitioweb/bostan/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1581">
+            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1581">
               <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
               <folding />
             </state>
@@ -132,8 +292,8 @@
       <file leaf-file-name="blog.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/01_sitioweb/bostan/views/blog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.563147" vertical-offset="0" max-vertical-offset="3859">
-              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.2620424" vertical-offset="476" max-vertical-offset="3859">
+              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#small#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#article#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#3;n#aside#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
@@ -160,7 +320,7 @@
       <file leaf-file-name="filters.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_sitioweb/bostan/js/filters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+            <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="493">
               <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding />
             </state>
@@ -170,7 +330,7 @@
       <file leaf-file-name="filters.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/app/filters.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923" vertical-offset="255" max-vertical-offset="1530">
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1530">
               <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
               <folding />
             </state>
@@ -521,11 +681,17 @@
       <option name="project" value="LOCAL" />
       <updated>1435290973012</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="06">
+      <created>1436328759856</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1436328759856</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -534,12 +700,12 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39409986" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43267778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15332198" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -564,7 +730,8 @@
     <MESSAGE value="03" />
     <MESSAGE value="04" />
     <MESSAGE value="05" />
-    <option name="LAST_COMMIT_MESSAGE" value="05" />
+    <MESSAGE value="06" />
+    <option name="LAST_COMMIT_MESSAGE" value="06" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -622,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1309">
           <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="816">
           <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,13 +1224,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1309">
           <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app/filters.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923" vertical-offset="255" max-vertical-offset="1530">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1530">
           <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
           <folding />
         </state>
@@ -1073,7 +1237,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01_sitioweb/bostan/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.230769" vertical-offset="11550" max-vertical-offset="15589">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11550" max-vertical-offset="15589">
           <caret line="692" column="37" selection-start-line="692" selection-start-column="37" selection-end-line="692" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
@@ -1122,7 +1286,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01_sitioweb/bostan/partials/xtreme-blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="527">
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="527">
           <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
           <folding />
         </state>
@@ -1130,7 +1294,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01_sitioweb/bostan/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.884615" vertical-offset="10649" max-vertical-offset="13464">
+        <state vertical-scroll-proportion="0.0" vertical-offset="10649" max-vertical-offset="13464">
           <caret line="640" column="58" selection-start-line="640" selection-start-column="58" selection-end-line="640" selection-end-column="58" />
           <folding>
             <marker date="1436297689939" expanded="true" signature="1059:1178" placeholder="..." />
@@ -1172,8 +1336,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01_sitioweb/bostan/views/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.563147" vertical-offset="0" max-vertical-offset="3859">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.2620424" vertical-offset="476" max-vertical-offset="3859">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#a#0;n#small#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#article#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#3;n#aside#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
