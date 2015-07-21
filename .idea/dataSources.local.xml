@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - @localhost" uuid="20383a54-14ff-4822-ac1c-dc310a9e686d">
+      <secret-storage>memory</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>phpmyadmin.* test.* xtreme_colegios.*</schema-pattern>
+      <default-schemas>phpmyadmin.*</default-schemas>
+    </data-source>
+  </component>
+</project>
