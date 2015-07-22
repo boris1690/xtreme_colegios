@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfb7c776-3627-41e6-be36-9ee2e678b097" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/animations.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/button.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/chart-flot.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/chart-radial.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/dashboard-profile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/dashboard-sidebar2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/dropdown-animations.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/filebox.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/form-extended.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/form-standard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/form-validation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/form-wizard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/ga.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/grid-masonry.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/grid.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/icons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/invoice.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/mailbox.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/maps-google.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/maps-vector.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/notifications.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/panels.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/portlets.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/search.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/spinners.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/table-datatable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/table-extended.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/table-standard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/template.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/timeline.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/typo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/02_admin/widgets.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/app/controllers/WebblogController.php" afterPath="$PROJECT_DIR$/api/app/controllers/WebblogController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/app/config/database.php" afterPath="$PROJECT_DIR$/api/app/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02_admin/index.html" afterPath="$PROJECT_DIR$/02_admin/index.html" />
     </list>
     <ignored path="xtreme_colegios.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,8 +51,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/02_admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.28181818">
-              <caret line="867" column="43" selection-start-line="867" selection-start-column="43" selection-end-line="867" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.79349905">
+              <caret line="905" column="0" selection-start-line="905" selection-start-column="0" selection-end-line="905" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1047,8 +1011,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/02_admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.28181818">
-          <caret line="867" column="43" selection-start-line="867" selection-start-column="43" selection-end-line="867" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.79349905">
+          <caret line="905" column="0" selection-start-line="905" selection-start-column="0" selection-end-line="905" selection-end-column="0" />
           <folding />
         </state>
       </provider>
