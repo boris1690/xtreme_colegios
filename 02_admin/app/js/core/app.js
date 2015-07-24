@@ -11,14 +11,16 @@
 
   app.config(['$routeProvider', function ($routeProvider) {
 
+
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/index.html',
         controller: 'IndexController'
       })
-      .when('/articulo/:name', {
-        templateUrl: 'views/blog.html',
-        controller: 'BlogController'
+      .when('/administrador/:name', {
+            templateUrl: function(params){ return 'views/' + params.name + ".html" },
+            controller: 'IndexController'
       })
       .otherwise({
         redirectTo: '/'
