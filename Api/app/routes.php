@@ -23,6 +23,24 @@ Route::filter('cors', function($route, $request, $response)
 });
 
 Route::resource('blogs','WebblogController');
+Route::resource('usuarios','WebusuarioController');
+Route::put('usuarios/{id}','WebusuarioController');
+Route::delete('usuarios/{id}','WebusuarioController');
+
 
 Route::resource('generic', 'GenericController@performance');
 Route::resource('generic/{table}/id/{id}', 'GenericController@show');
+
+/*Route::group(['prefix' => 'user'], function()
+{
+    Route::get('', ['uses' => 'UserController@allUsers']);
+
+    Route::get('{id}', ['uses' => 'UserController@getUser']);
+
+    Route::post('', ['uses' => 'UserController@saveUser']);
+
+    Route::put('{id}', ['uses' => 'UsercCntroller@updateUser']);
+
+    Route::delete('{id}', ['uses' => 'UserController@deleteUsers']);
+
+});*/
