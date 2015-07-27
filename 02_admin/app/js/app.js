@@ -3,264 +3,268 @@
  * This script handle the calendar demo with draggable 
  * events and events creations
  =========================================================*/
+var myApp =
+    {
+        calendar: function($, window, document){
+            'use strict';
 
-(function($, window, document){
-  'use strict';
+            if(!$.fn.fullCalendar) return;
 
-  if(!$.fn.fullCalendar) return;
-
-  // global shared var to know what we are dragging
-  var draggingEvent = null;
+            // global shared var to know what we are dragging
+            var draggingEvent = null;
 
 
-  /**
-   * ExternalEvent object
-   * @param jQuery Object elements Set of element as jQuery objects
-   */
-  var ExternalEvent = function (elements) {
-      
-      if (!elements) return;
-      
-      elements.each(function() {
-          var $this = $(this);
-          // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
-          // it doesn't need to have a start or end
-          var calendarEventObject = {
-              title: $.trim($this.text()) // use the element's text as the event title
-          };
+            /**
+             * ExternalEvent object
+             * @param jQuery Object elements Set of element as jQuery objects
+             */
+            var ExternalEvent = function (elements) {
 
-          // store the Event Object in the DOM element so we can get to it later
-          $this.data('calendarEventObject', calendarEventObject);
+                if (!elements) return;
 
-          // make the event draggable using jQuery UI
-          $this.draggable({
-              zIndex: 1070,
-              revert: true, // will cause the event to go back to its
-              revertDuration: 0  //  original position after the drag
-          });
+                elements.each(function() {
+                    var $this = $(this);
+                    // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+                    // it doesn't need to have a start or end
+                    var calendarEventObject = {
+                        title: $.trim($this.text()) // use the element's text as the event title
+                    };
 
-      });
-  };
+                    // store the Event Object in the DOM element so we can get to it later
+                    $this.data('calendarEventObject', calendarEventObject);
 
-  /**
-   * Invoke full calendar plugin and attach behavior
-   * @param  jQuery [calElement] The calendar dom element wrapped into jQuery
-   * @param  EventObject [events] An object with the event list to load when the calendar displays
-   */
-  function initCalendar(calElement, events) {
+                    // make the event draggable using jQuery UI
+                    $this.draggable({
+                        zIndex: 1070,
+                        revert: true, // will cause the event to go back to its
+                        revertDuration: 0  //  original position after the drag
+                    });
 
-      // check to remove elements from the list
-      var removeAfterDrop = $('#remove-after-drop');
+                });
+            };
 
-      calElement.fullCalendar({
-          header: {
-              left:   'prev,next today',
-              center: 'title',
-              right:  'month,agendaWeek,agendaDay'
-          },
-          buttonIcons: { // note the space at the beginning
-              prev:    ' fa fa-caret-left',
-              next:    ' fa fa-caret-right'
-          },
-          buttonText: {
-              today: 'today',
-              month: 'month',
-              week:  'week',
-              day:   'day'
-          },
-          editable: true,
-          droppable: true, // this allows things to be dropped onto the calendar 
-          drop: function(date, allDay) { // this function is called when something is dropped
-              
-              var $this = $(this),
-                  // retrieve the dropped element's stored Event Object
-                  originalEventObject = $this.data('calendarEventObject');
+            /**
+             * Invoke full calendar plugin and attach behavior
+             * @param  jQuery [calElement] The calendar dom element wrapped into jQuery
+             * @param  EventObject [events] An object with the event list to load when the calendar displays
+             */
+            function initCalendar(calElement, events) {
 
-              // if something went wrong, abort
-              if(!originalEventObject) return;
+                // check to remove elements from the list
+                var removeAfterDrop = $('#remove-after-drop');
 
-              // clone the object to avoid multiple events with reference to the same object
-              var clonedEventObject = $.extend({}, originalEventObject);
+                calElement.fullCalendar({
+                    header: {
+                        left:   'prev,next today',
+                        center: 'title',
+                        right:  'month,agendaWeek,agendaDay'
+                    },
+                    buttonIcons: { // note the space at the beginning
+                        prev:    ' fa fa-caret-left',
+                        next:    ' fa fa-caret-right'
+                    },
+                    buttonText: {
+                        today: 'today',
+                        month: 'month',
+                        week:  'week',
+                        day:   'day'
+                    },
+                    editable: true,
+                    droppable: true, // this allows things to be dropped onto the calendar
+                    drop: function(date, allDay) { // this function is called when something is dropped
 
-              // assign the reported date
-              clonedEventObject.start = date;
-              clonedEventObject.allDay = allDay;
-              clonedEventObject.backgroundColor = $this.css('background-color');
-              clonedEventObject.borderColor = $this.css('border-color');
+                        var $this = $(this),
+                        // retrieve the dropped element's stored Event Object
+                            originalEventObject = $this.data('calendarEventObject');
 
-              // render the event on the calendar
-              // the last `true` argument determines if the event "sticks" 
-              // (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-              calElement.fullCalendar('renderEvent', clonedEventObject, true);
-              
-              // if necessary remove the element from the list
-              if(removeAfterDrop.is(':checked')) {
-                $this.remove();
-              }
-          },
-          eventDragStart: function (event, js, ui) {
-            draggingEvent = event;
-          },
-          // This array is the events sources
-          events: events
-      });
-  }
+                        // if something went wrong, abort
+                        if(!originalEventObject) return;
 
-  /**
-   * Inits the external events panel
-   * @param  jQuery [calElement] The calendar dom element wrapped into jQuery
-   */
-  function initExternalEvents(calElement){
-    // Panel with the external events list
-    var externalEvents = $('.external-events');
+                        // clone the object to avoid multiple events with reference to the same object
+                        var clonedEventObject = $.extend({}, originalEventObject);
 
-    // init the external events in the panel
-    new ExternalEvent(externalEvents.children('div'));
+                        // assign the reported date
+                        clonedEventObject.start = date;
+                        clonedEventObject.allDay = allDay;
+                        clonedEventObject.backgroundColor = $this.css('background-color');
+                        clonedEventObject.borderColor = $this.css('border-color');
 
-    // External event color is danger-red by default
-    var currColor = '#f6504d';
-    // Color selector button
-    var eventAddBtn = $('.external-event-add-btn');
-    // New external event name input
-    var eventNameInput = $('.external-event-name');
-    // Color switchers
-    var eventColorSelector = $('.external-event-color-selector .point');
+                        // render the event on the calendar
+                        // the last `true` argument determines if the event "sticks"
+                        // (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+                        calElement.fullCalendar('renderEvent', clonedEventObject, true);
 
-    // Trash events Droparea 
-    $('.external-events-trash').droppable({
-      accept:       '.fc-event',
-      activeClass:  'active',
-      hoverClass:   'hovered',
-      tolerance:    'touch',
-      drop: function(event, ui) {
-        
-        // You can use this function to send an ajax request
-        // to remove the event from the repository
-        
-        if(draggingEvent) {
-          var eid = draggingEvent.id || draggingEvent._id;
-          // Remove the event
-          calElement.fullCalendar('removeEvents', eid);
-          // Remove the dom element
-          ui.draggable.remove();
-          // clear
-          draggingEvent = null;
-        }
-      }
-    });
+                        // if necessary remove the element from the list
+                        if(removeAfterDrop.is(':checked')) {
+                            $this.remove();
+                        }
+                    },
+                    eventDragStart: function (event, js, ui) {
+                        draggingEvent = event;
+                    },
+                    // This array is the events sources
+                    events: events
+                });
+            }
 
-    eventColorSelector.click(function(e) {
-        e.preventDefault();
-        var $this = $(this);
+            /**
+             * Inits the external events panel
+             * @param  jQuery [calElement] The calendar dom element wrapped into jQuery
+             */
+            function initExternalEvents(calElement){
+                // Panel with the external events list
+                var externalEvents = $('.external-events');
 
-        // Save color
-        currColor = $this.css('background-color');
-        // De-select all and select the current one
-        eventColorSelector.removeClass('selected');
-        $this.addClass('selected');
-    });
+                // init the external events in the panel
+                new ExternalEvent(externalEvents.children('div'));
 
-    eventAddBtn.click(function(e) {
-        e.preventDefault();
-        
-        // Get event name from input
-        var val = eventNameInput.val();
-        // Dont allow empty values
-        if ($.trim(val) === '') return;
-        
-        // Create new event element
-        var newEvent = $('<div/>').css({
-                            'background-color': currColor,
-                            'border-color':     currColor,
-                            'color':            '#fff'
-                        })
+                // External event color is danger-red by default
+                var currColor = '#f6504d';
+                // Color selector button
+                var eventAddBtn = $('.external-event-add-btn');
+                // New external event name input
+                var eventNameInput = $('.external-event-name');
+                // Color switchers
+                var eventColorSelector = $('.external-event-color-selector .point');
+
+                // Trash events Droparea
+                $('.external-events-trash').droppable({
+                    accept:       '.fc-event',
+                    activeClass:  'active',
+                    hoverClass:   'hovered',
+                    tolerance:    'touch',
+                    drop: function(event, ui) {
+
+                        // You can use this function to send an ajax request
+                        // to remove the event from the repository
+
+                        if(draggingEvent) {
+                            var eid = draggingEvent.id || draggingEvent._id;
+                            // Remove the event
+                            calElement.fullCalendar('removeEvents', eid);
+                            // Remove the dom element
+                            ui.draggable.remove();
+                            // clear
+                            draggingEvent = null;
+                        }
+                    }
+                });
+
+                eventColorSelector.click(function(e) {
+                    e.preventDefault();
+                    var $this = $(this);
+
+                    // Save color
+                    currColor = $this.css('background-color');
+                    // De-select all and select the current one
+                    eventColorSelector.removeClass('selected');
+                    $this.addClass('selected');
+                });
+
+                eventAddBtn.click(function(e) {
+                    e.preventDefault();
+
+                    // Get event name from input
+                    var val = eventNameInput.val();
+                    // Dont allow empty values
+                    if ($.trim(val) === '') return;
+
+                    // Create new event element
+                    var newEvent = $('<div/>').css({
+                        'background-color': currColor,
+                        'border-color':     currColor,
+                        'color':            '#fff'
+                    })
                         .html(val);
 
-        // Prepends to the external events list
-        externalEvents.prepend(newEvent);
-        // Initialize the new event element
-        new ExternalEvent(newEvent);
-        // Clear input
-        eventNameInput.val('');
-    });
-  }
+                    // Prepends to the external events list
+                    externalEvents.prepend(newEvent);
+                    // Initialize the new event element
+                    new ExternalEvent(newEvent);
+                    // Clear input
+                    eventNameInput.val('');
+                });
+            }
 
-  /**
-   * Creates an array of events to display in the first load of the calendar
-   * Wrap into this function a request to a source to get via ajax the stored events
-   * @return Array The array with the events
-   */
-  function createDemoEvents() {
-    // Date for the calendar events (dummy data)
-    var date = new Date();
-    var d = date.getDate(),
-        m = date.getMonth(),
-        y = date.getFullYear();
+            /**
+             * Creates an array of events to display in the first load of the calendar
+             * Wrap into this function a request to a source to get via ajax the stored events
+             * @return Array The array with the events
+             */
+            function createDemoEvents() {
+                // Date for the calendar events (dummy data)
+                var date = new Date();
+                var d = date.getDate(),
+                    m = date.getMonth(),
+                    y = date.getFullYear();
 
-    return  [
-              {
-                  title: 'All Day Event',
-                  start: new Date(y, m, 1),
-                  backgroundColor: '#f56954', //red 
-                  borderColor: '#f56954' //red
-              },
-              {
-                  title: 'Long Event',
-                  start: new Date(y, m, d - 5),
-                  end: new Date(y, m, d - 2),
-                  backgroundColor: '#f39c12', //yellow
-                  borderColor: '#f39c12' //yellow
-              },
-              {
-                  title: 'Meeting',
-                  start: new Date(y, m, d, 10, 30),
-                  allDay: false,
-                  backgroundColor: '#0073b7', //Blue
-                  borderColor: '#0073b7' //Blue
-              },
-              {
-                  title: 'Lunch',
-                  start: new Date(y, m, d, 12, 0),
-                  end: new Date(y, m, d, 14, 0),
-                  allDay: false,
-                  backgroundColor: '#00c0ef', //Info (aqua)
-                  borderColor: '#00c0ef' //Info (aqua)
-              },
-              {
-                  title: 'Birthday Party',
-                  start: new Date(y, m, d + 1, 19, 0),
-                  end: new Date(y, m, d + 1, 22, 30),
-                  allDay: false,
-                  backgroundColor: '#00a65a', //Success (green)
-                  borderColor: '#00a65a' //Success (green)
-              },
-              {
-                  title: 'Open Google',
-                  start: new Date(y, m, 28),
-                  end: new Date(y, m, 29),
-                  url: 'http://google.com/',
-                  backgroundColor: '#3c8dbc', //Primary (light-blue)
-                  borderColor: '#3c8dbc' //Primary (light-blue)
-              }
-          ];
-  }
+                return  [
+                    {
+                        title: 'All Day Event',
+                        start: new Date(y, m, 1),
+                        backgroundColor: '#f56954', //red
+                        borderColor: '#f56954' //red
+                    },
+                    {
+                        title: 'Long Event',
+                        start: new Date(y, m, d - 5),
+                        end: new Date(y, m, d - 2),
+                        backgroundColor: '#f39c12', //yellow
+                        borderColor: '#f39c12' //yellow
+                    },
+                    {
+                        title: 'Meeting',
+                        start: new Date(y, m, d, 10, 30),
+                        allDay: false,
+                        backgroundColor: '#0073b7', //Blue
+                        borderColor: '#0073b7' //Blue
+                    },
+                    {
+                        title: 'Lunch',
+                        start: new Date(y, m, d, 12, 0),
+                        end: new Date(y, m, d, 14, 0),
+                        allDay: false,
+                        backgroundColor: '#00c0ef', //Info (aqua)
+                        borderColor: '#00c0ef' //Info (aqua)
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: new Date(y, m, d + 1, 19, 0),
+                        end: new Date(y, m, d + 1, 22, 30),
+                        allDay: false,
+                        backgroundColor: '#00a65a', //Success (green)
+                        borderColor: '#00a65a' //Success (green)
+                    },
+                    {
+                        title: 'Open Google',
+                        start: new Date(y, m, 28),
+                        end: new Date(y, m, 29),
+                        url: 'http://google.com/',
+                        backgroundColor: '#3c8dbc', //Primary (light-blue)
+                        borderColor: '#3c8dbc' //Primary (light-blue)
+                    }
+                ];
+            }
 
-  // When dom ready, init calendar and events
-  $(function() {
+            // When dom ready, init calendar and events
+            $(function() {
 
-      // The element that will display the calendar
-      var calendar = $('#calendar');
+                // The element that will display the calendar
+                var calendar = $('#calendar');
 
-      var demoEvents = createDemoEvents();
+                var demoEvents = createDemoEvents();
 
-      initExternalEvents(calendar);
+                initExternalEvents(calendar);
 
-      initCalendar(calendar, demoEvents);
+                initCalendar(calendar, demoEvents);
 
-  });
+            });
 
 
-}(jQuery, window, document));
+        }
+    };
+
+//((jQuery, window, document));
 
 
 
@@ -269,7 +273,7 @@
  * Enable use of classyloader directly from data attributes
  =========================================================*/
 
-(function($, window, document){
+myApp.classyLoader = function($, window, document){
   'use strict';
 
   var Selector        = '[data-toggle="classyloader"]',
@@ -300,14 +304,16 @@
 
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: clear-storage.js
  * Removes a key from the browser storage via element click
  =========================================================*/
 
-(function($, window, document){
+myApp.clearStorage = function($, window, document){
   'use strict';
 
   if( !store || !store.enabled ) return;
@@ -333,14 +339,16 @@
 
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: datepicker,js
  * DateTime Picker init
  =========================================================*/
 
-(function($, window, document){
+myApp.dataTable = function($, window, document){
   'use strict';
 
   $(function(){
@@ -425,14 +433,16 @@
 
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: datepicker,js
  * DateTime Picker init
  =========================================================*/
 
-(function($, window, document){
+myApp.dataPicker =  function($, window, document){
   'use strict';
 
   var Selector = '.datetimepicker';
@@ -460,7 +470,9 @@
 
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: dropdown-animate.js
@@ -471,7 +483,7 @@
  * Requires animo.js
  =========================================================*/
 
-(function($, window, document){
+myApp.dropdownAnimate = function($, window, document){
   'use strict';
 
   $(function() {
@@ -497,14 +509,16 @@
   
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: filter-tag.js
  * Basic items filter 
  =========================================================*/
 
-(function($, window, document){
+myApp.filterTag = function($, window, document){
   'use strict';
 
   var selectorFilterTag   = '[data-filter-tag]',    // the trigger button
@@ -550,7 +564,9 @@
 
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: flot-chart.js
@@ -558,7 +574,7 @@
  * plugin to elements according to its type
  =========================================================*/
 
-(function($, window, document){
+myApp.flotChart = function($, window, document){
   'use strict';
 
   /**
@@ -847,7 +863,9 @@
     })();
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: form-wizard.js
@@ -856,7 +874,7 @@
  * [data-validate-step] to enable step validation via parsley
  =========================================================*/
 
-(function($, window, document){
+myApp.formPlugin = function($, window, document){
   'use strict';
 
   if(!$.fn.bwizard) return;
@@ -891,14 +909,16 @@
   });
 
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: gmap.js
  * Init Google Map plugin
  =========================================================*/
 
-(function($, window, document){
+myApp,gmap = function($, window, document){
   'use strict';
 
   // -------------------------
@@ -1019,14 +1039,16 @@
 
 }
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: load-css.js
  * Request and load into the current page a css file
  =========================================================*/
 
-(function($, window, document){
+myApp.loadCss = function($, window, document){
   'use strict';
 
   var Selector = '[data-toggle="load-css"]',
@@ -1093,7 +1115,9 @@
     }
   }
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: markdownarea.js
@@ -1102,7 +1126,7 @@
  * @author: geedmo (http://geedmo.com)
  =========================================================*/
 
-(function($, window, document){
+myApp.markdownArea = function($, window, document){
     'use strict';
 
     var Markdownarea = function(element, options){
@@ -1513,7 +1537,9 @@
 
     return Markdownarea;
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: navbar-search.js
@@ -1524,7 +1550,7 @@
  * Auto dismiss on ESC key
  =========================================================*/
 
-(function($, window, document){
+myApp.navbarSearch = function($, window, document){
   'use strict';
   
   $(function() {
@@ -1569,7 +1595,9 @@
   });
 
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: notify.js
@@ -1579,7 +1607,7 @@
  * [data-options="options in json format" ]
  =========================================================*/
 
-(function($, window, document){
+myApp.notify = function($, window, document){
   'use strict';
 
   var Selector = '[data-toggle="notify"]',
@@ -1620,7 +1648,9 @@
   }
 
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 
 /**
@@ -1629,7 +1659,7 @@
  * More information http://getuikit.com/docs/addons_notify.html
  */
 
-(function($, window, document){
+myApp.addon = function($, window, document){
 
     var containers = {},
         messages   = {},
@@ -1791,7 +1821,9 @@
 
     return notify;
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: panel-perform.js
@@ -1800,7 +1832,7 @@
  *
  * Requires animo.js
  =========================================================*/
-(function($, window, document){
+myApp.panelPerform = function($, window, document){
   'use strict';
   
   var panelSelector = '[data-perform="panel-dismiss"]',
@@ -1838,7 +1870,9 @@
 
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 
 /**
@@ -1848,7 +1882,7 @@
  * Also uses browser storage to keep track
  * of panels collapsed state
  */
-(function($, window, document) {
+myApp.collapsePanels = function($, window, document) {
   'use strict';
   var panelSelector = '[data-perform="panel-collapse"]',
       storageKeyName = 'panelState';
@@ -1933,15 +1967,16 @@
   }
 
 
-}(jQuery, window, document));
+};
 
+//(jQuery, window, document));
 
 /**
  * Refresh panels
  * [data-perform="panel-refresh"]
  * [data-spinner="standard"]
  */
-(function($, window, document){
+myApp.refreshPanels = function($, window, document){
   'use strict';
   var panelSelector  = '[data-perform="panel-refresh"]',
       refreshEvent   = 'panel-refresh',
@@ -1991,7 +2026,9 @@
 
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: play-animation.js
@@ -2004,7 +2041,7 @@
  * Requires animo.js
  =========================================================*/
  
-(function($, window, document){
+myApp.playAnimation = function($, window, document){
   'use strict';
 
   var Selector = '[data-toggle="play-animation"]';
@@ -2065,7 +2102,9 @@
 
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: portlet.js
@@ -2074,7 +2113,7 @@
  * panel, so .col-* element are ideal.
  =========================================================*/
 
-(function($, window, document){
+myApp.portlet = function($, window, document){
   'use strict';
 
   // Component is required
@@ -2157,7 +2196,9 @@
     $(this).css('min-height', "");
   }*/
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 
 /**=========================================================
@@ -2166,7 +2207,7 @@
  * next to the current element (sibling)
  * Targeted elements must have [data-toggle="collapse-next"]
  =========================================================*/
-(function($, window, document){
+myApp.sidebarMenu = function($, window, document){
   'use strict';
 
   var collapseSelector = '[data-toggle="collapse-next"]',
@@ -2210,14 +2251,16 @@
   });
 
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: sparkline.js
  * SparkLines Mini Charts
  =========================================================*/
 
-(function($, window, document){
+myApp.aparkLine = function($, window, document){
   'use strict';
 
   var Selector = '.inlinesparkline';
@@ -2247,14 +2290,16 @@
 
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: table-checkall.js
  * Tables check all checkbox
  =========================================================*/
 
-(function($, window, document){
+myApp.tableCheckall = function($, window, document){
   'use strict';
   
   var Selector = 'th.check-all';
@@ -2270,7 +2315,9 @@
 
   });
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: toggle-state.js
@@ -2280,7 +2327,7 @@
  * Optionally save and restore state [data-persists="true"]
  =========================================================*/
 
-(function($, window, document){
+myApp.toggleState = function($, window, document){
   'use strict';
 
   var SelectorToggle  = '[data-toggle-state]',
@@ -2366,14 +2413,16 @@
   };
 
 
-}(jQuery, window, document));
+};
+
+//(jQuery, window, document));
 
 /**=========================================================
  * Module: tooltips.js
  * Initialize Bootstrap tooltip with auto placement
  =========================================================*/
 
-(function($, window, document){
+myApp.toolTips = function($, window, document){
   'use strict';
 
   $(function(){
@@ -2419,7 +2468,7 @@
     return (left - width) - (window.pageXOffset);
   }
 
-}(jQuery, window, document));
+};
 
 /**=========================================================
  * Module: upload-demo.js
@@ -2427,7 +2476,7 @@
  * See file server/upload.php for more details
  =========================================================*/
 
-(function($, window, document){
+myApp.uploadDemo = function($, window, document){
   'use strict';
 
   $(function() {
@@ -2469,7 +2518,7 @@
         drop   = new $.upload.drop($('#upload-drop'), settings);
   });
 
-}(jQuery, window, document));
+};
 
 /**=========================================================
  * Module: upload.js
@@ -2479,7 +2528,7 @@
  * Adapted version to work with Bootstrap classes
  =========================================================*/
 
-(function($, window, document){
+myApp.Upload = function($, window, document){
     'use strict';
 
     var UploadSelect = function(element, options) {
@@ -2712,7 +2761,7 @@
 
     return xhrupload;
 
-}(jQuery, window, document));
+};
 
 /**=========================================================
  * Module: utils.js
@@ -2720,7 +2769,7 @@
  * adapted from the core of UIKit
  =========================================================*/
 
-(function($, window, doc){
+myApp.utils = function($, window, doc){
     'use strict';
     
     var $html = $("html"), $win = $(window);
@@ -2879,13 +2928,13 @@
     // add touch identifier class
     $html.addClass($.support.touch ? "touch" : "no-touch");
 
-}(jQuery, window, document));
+};
 /**=========================================================
  * Module: vmaps,js
  * jVector Maps support
  =========================================================*/
 
-(function($, window, document){
+myApp.vmaps = function($, window, document){
   'use strict';
 
   var Selector = '[data-toggle="vector-map"]',
@@ -2989,12 +3038,12 @@
     });
   }
 
-}(jQuery, window, document));
+};
 
 /**
  * Provides a start point to run plugins and other scripts
  */
-(function($, window, document){
+myApp.start = function($, window, document){
   'use strict';
 
   if (typeof $ === 'undefined') { throw new Error('This application\'s JavaScript requires jQuery'); }
@@ -3043,4 +3092,4 @@
     $('.wrapper > section').css('min-height', $(window).height());
   }
 
-}(jQuery, window, document));
+};
