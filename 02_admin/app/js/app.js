@@ -877,6 +877,8 @@ myApp.flotChart = function($, window, document){
 myApp.formPlugin = function($, window, document){
   'use strict';
 
+    alert(1);
+
   if(!$.fn.bwizard) return;
 
   var Selector = '[data-toggle="wizard"]';
@@ -918,7 +920,7 @@ myApp.formPlugin = function($, window, document){
  * Init Google Map plugin
  =========================================================*/
 
-myApp,gmap = function($, window, document){
+myApp.gmap = function($, window, document){
   'use strict';
 
   // -------------------------
@@ -3093,3 +3095,41 @@ myApp.start = function($, window, document){
   }
 
 };
+
+
+// Inializo las app
+$(document).ready(function(){
+    myApp.calendar(jQuery, window, document);
+    myApp.classyLoader(jQuery, window, document);
+    myApp.clearStorage(jQuery, window, document);
+    myApp.dataTable(jQuery, window, document);
+    myApp.dataPicker(jQuery, window, document);
+    myApp.dropdownAnimate(jQuery, window, document);
+    myApp.filterTag(jQuery, window, document);
+    myApp.flotChart(jQuery, window, document);
+    //myApp.formPlugin(jQuery, window, document);
+    myApp.gmap(jQuery, window, document);
+    myApp.loadCss(jQuery, window, document);
+    myApp.markdownArea(jQuery, window, document);
+    myApp.navbarSearch(jQuery, window, document);
+    myApp.notify(jQuery, window, document);
+    myApp.addon(jQuery, window, document);
+    myApp.panelPerform(jQuery, window, document);
+    myApp.collapsePanels(jQuery, window, document);
+    myApp.refreshPanels(jQuery, window, document);
+    myApp.playAnimation(jQuery, window, document);
+    myApp.portlet(jQuery, window, document);
+    myApp.sidebarMenu(jQuery, window, document);
+    myApp.aparkLine(jQuery, window, document);
+    myApp.tableCheckall(jQuery, window, document);
+    myApp.toggleState(jQuery, window, document);
+    myApp.toolTips(jQuery, window, document);
+    myApp.uploadDemo(jQuery, window, document);
+    myApp.Upload(jQuery, window, document);
+    myApp.utils(jQuery, window, document);
+    myApp.vmaps(jQuery, window, document);
+    myApp.start(jQuery, window, document);
+});
+
+
+

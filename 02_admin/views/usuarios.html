@@ -104,7 +104,15 @@
     </div>
 </div>
 
-<!-- App Main-->
-<script src="app/js/app.js"></script>
-<!-- END Scripts-->
+<!-- APP FORM -->
+<script>
+    alert();
+    // in controller
+    $scope.init = function () {
+        // check if there is query in url
+        // and fire search in case its value is not empty
+        myApp.formPlugin(jQuery, window, document);
+    };
 
+</script>
+<!-- End APP FORM-->
