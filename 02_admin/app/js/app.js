@@ -876,10 +876,10 @@ myApp.flotChart = function($, window, document){
 
 myApp.formPlugin = function($, window, document){
   'use strict';
-
-    alert(1);
-
+    alert();
   if(!$.fn.bwizard) return;
+
+
 
   var Selector = '[data-toggle="wizard"]';
 

@@ -10,7 +10,7 @@
       function all() {
         var deferred = $q.defer();
 
-        $http.get('http://api.xtreme.colegiosweb/blogs')
+        $http.get('http://api.xtreme.colegiosweb/generic/{"tables":["web_usuarios"]}')
           .success(function (data) {
             deferred.resolve(data);
           });

@@ -38,6 +38,53 @@
 
 
     }])
+    .controller('GenericoController', ['$scope', '$routeParams', 'xtremeService', function ($scope, $routeParams, xtremeService) {
+        console.log($routeParams);
+        var name = $routeParams.name;
+
+        /*if (type) {
+         $scope.type = type;
+
+         pokemonService.byType(type).then(function (data) {
+         $scope.pokemons = data
+         $scope.groupped = partition(data, 4);
+         });
+         } else {
+         pokemonService.all().then(function (data) {
+         $scope.pokemons = data;
+         $scope.groupped = partition(data, 4);
+         });
+         }
+
+         */
+
+        xtremeService.all().then(function (data) {
+          //$scope.pokemons = data;
+          //$scope.groupped = partition(data, 4);
+
+          $scope.tipo = name;
+
+          $scope.datalista = data[Object.keys(data)[0]];
+        });
+
+        function partition(data, n) {
+          return _.chain(data).groupBy(function (element, index) {
+            return Math.floor(index / n);
+          }).toArray().value();
+        }
+
+
+        xtremeService.all().then(function (data){
+
+          $scope.blogs = data;
+          $scope.groupped = partition(data, 4);
+
+        })
+
+        $scope.tipo="1";
+
+
+      }])
     .controller('BlogController', ['$scope', '$routeParams', 'xtremeService', function ($scope, $routeParams, xtremeService) {
 
       var name = $routeParams.name;

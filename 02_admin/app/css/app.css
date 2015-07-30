@@ -113,6 +113,13 @@ hr {
   height: 1px;
   background-color: #f1f2f3;
 }
+.red{
+  color: red;
+}
+.green
+{
+  color: green;
+}
 .well {
   border: 1px solid #d1d2d3;
 }

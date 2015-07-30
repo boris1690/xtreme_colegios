@@ -47,16 +47,20 @@ class GenericController extends Controller {
     {
         $array = json_decode($jsontable,true);
 
-        foreach($array['tables'] as $item) {
-            try {
+
+        try {
+            foreach ($array['tables'] as $item) {
                 $statusCode = 200;
                 $message = "OK";
-                $response[$item] = DB::table($item)->select('*')->where('estado','A')->get();
+                $response[$item] = DB::table($item)->select('*')->where('estado', 'A')->get();
 
-            } catch (Exception $e) {
-                $statusCode = 400;
-                $message = $e->getMessage();
+                //$response[$item]['status'] = $statusCode;
+                //$response[$item]['message'] = $message;
             }
+
+        } catch (Exception $e) {
+            $statusCode = 400;
+            $message = $e->getMessage();
 
             $response[$item]['status'] = $statusCode;
             $response[$item]['message'] = $message;

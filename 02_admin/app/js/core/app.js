@@ -20,7 +20,7 @@
       })
       .when('/administrador/:name', {
             templateUrl: function(params){ return 'views/' + params.name + ".html" },
-            controller: 'IndexController'
+            controller: 'GenericoController'
       })
       .otherwise({
         redirectTo: '/'

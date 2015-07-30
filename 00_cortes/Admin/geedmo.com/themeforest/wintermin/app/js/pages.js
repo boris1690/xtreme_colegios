@@ -1,12 +1,12 @@
 /**=========================================================
  * Module: utils.js
- * jQuery Utility functions library 
+ * jQuery Utility functions library
  * adapted from the core of UIKit
  =========================================================*/
 
 (function($, window, doc){
     'use strict';
-    
+
     var $html = $("html"), $win = $(window);
 
     $.support.transition = (function() {
@@ -167,21 +167,21 @@
 /**=========================================================
  * Module: play-animation.js
  * Provides a simple way to run animation with a trigger
- * Targeted elements must have 
+ * Targeted elements must have
  *   [data-toggle="play-animation"]
- *   [data-target="Target element affected by the animation"] 
+ *   [data-target="Target element affected by the animation"]
  *   [data-play="Animation name (http://daneden.github.io/animate.css/)"]
  *
  * Requires animo.js
  =========================================================*/
- 
+
 (function($, window, document){
   'use strict';
 
   var Selector = '[data-toggle="play-animation"]';
 
   $(function() {
-    
+
     var $scroller = $(window).add('body, .wrapper');
 
     // Parse animations params and attach trigger to scroll
@@ -190,9 +190,9 @@
           offset    = $this.data('offset'),
           delay     = $this.data('delay')     || 100, // milliseconds
           animation = $this.data('play')      || 'bounce';
-      
+
       if(typeof offset !== 'undefined') {
-        
+
         // test if the element starts visible
         testAnimation($this);
         // test on scroll
@@ -231,7 +231,7 @@
       if(target && target) {
         target.animo( { animation: animation } );
       }
-      
+
     });
 
   });
@@ -255,7 +255,7 @@
     var Selector           = '[data-toggle="collapse-autoactive"]',
         panelHeading       = '.panel-heading',
         panelHeadingActive = 'panel-heading-active';
-    
+
       $(document).on('show.bs.collapse', Selector, function (e) {
         // From the panel-group, deactive all headings
         $(e.currentTarget)
@@ -269,7 +269,7 @@
 
 
     // ----------------------------------------------------------
-    // If you need Javascript components from the application 
+    // If you need Javascript components from the application
     // do not include the file app.js in all your pages.
     // Find the module and paste the source here to keep the pages
     // lightweight and separated from the application source
