@@ -21,26 +21,43 @@ Route::filter('cors', function($route, $request, $response)
     $response->headers->set('Access-Control-Allow-Origin', '*');
     return $response;
 });
-
-Route::resource('blogs','WebblogController');
+//Route::resource('usuarios','AplRefUsuarioController');
+//Route::get('usuarios/{id}','AplRefUsuarioController');
+//Route::get('usuarios/{id}','AplRefUsuarioController');
+/*Route::resource('blogs','WebblogController');
 Route::resource('usuarios','WebusuarioController');
 Route::put('usuarios/{id}','WebusuarioController');
-Route::delete('usuarios/{id}','WebusuarioController');
+Route::delete('usuarios/{id}','WebusuarioController');*/
 
 
-Route::resource('generic', 'GenericController@performance');
-Route::resource('generic/{table}/id/{id}', 'GenericController@show');
 
-/*Route::group(['prefix' => 'user'], function()
+
+//Route::resource('generic', 'GenericController@performance');
+//Route::resource('generic/{table}', 'GenericController@show');
+
+Route::filter('auth', function()
 {
-    Route::get('', ['uses' => 'UserController@allUsers']);
+    // Slight change to redirect to login route
+    return Auth::basic();
+});
 
-    Route::get('{id}', ['uses' => 'UserController@getUser']);
+Route::group(['prefix' => '/usuarios', 'before' => 'auth'],  function()
+{
+    Route::get('', ['uses' => 'AplRefUsuarioController@index']);
 
-    Route::post('', ['uses' => 'UserController@saveUser']);
+    Route::get('{id}', ['uses' => 'AplRefUsuarioController@show']);
 
-    Route::put('{id}', ['uses' => 'UsercCntroller@updateUser']);
+    Route::post('', ['uses' => 'AplRefUsuarioController@store']);
 
-    Route::delete('{id}', ['uses' => 'UserController@deleteUsers']);
+    Route::put('{id}', ['uses' => 'AplRefUsuarioController@update']);
 
-});*/
+    Route::delete('{id}', ['uses' => 'AplRefUsuarioController@destroy']);
+
+});
+
+Route::get('/test', function(){
+    $users = Aplrefusuario::all();
+    foreach($users as $user){
+        echo $user->username.'<br>';
+    }
+});

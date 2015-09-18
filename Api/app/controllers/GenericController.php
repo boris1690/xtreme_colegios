@@ -17,9 +17,10 @@ class GenericController extends Controller {
 
 
 
-    public function show($jsontable,$jsonid)
+    public function show($jsonData)
     {
-        $arraytable = json_decode($jsontable,true);
+        print_r($jsonData);
+        /*$arraytable = json_decode($jsontable,true);
         $arrayid = json_decode($jsonid,true);
 
 
@@ -40,19 +41,26 @@ class GenericController extends Controller {
             $response['message'] = $message;
         }
 
-        return Response::json($response, $statusCode);
+        return Response::json($response, $statusCode);*/
     }
 
-    public function performance($jsontable)
+    public function performance($jsonData)
     {
-        $array = json_decode($jsontable,true);
+
+        $array = json_decode($jsonData,true);
 
 
         try {
-            foreach ($array['tables'] as $item) {
+            foreach ($array['tables'] as $item=>$value) {
+
+                $table = $item;
+                $fields = implode(",",$value['fields']);
+
+
+
                 $statusCode = 200;
                 $message = "OK";
-                $response[$item] = DB::table($item)->select('*')->where('estado', 'A')->get();
+                $response[$table] = DB::select('select ' . $fields . ' from ' . $table);
 
                 //$response[$item]['status'] = $statusCode;
                 //$response[$item]['message'] = $message;
@@ -67,7 +75,6 @@ class GenericController extends Controller {
         }
 
         return Response::json($response, $statusCode);
-
 
     }
 
