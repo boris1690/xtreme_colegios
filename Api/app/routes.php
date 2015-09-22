@@ -98,11 +98,13 @@ Route::group(['prefix' => '/usuarios','before' => 'authenticated'],  function()
 
 
 Route::filter('authenticated',function(){
-    $token = Request::header('token');
 
-    $user = Aplrefusuario::where('authentication_token', '=', $token)->get();
-    if($token && $user->count() == 0){
-        return Response::json(['Content' => 'No esta autorizado'], 401);
-    }
+        $token = Request::header('token');
+
+        $user = Aplrefusuario::where('authentication_token', '=', $token)->get();
+        if($user->count() == 0){
+            return Response::json(['Content' => 'No esta autorizado'], 401);
+        }
+
 
 });
