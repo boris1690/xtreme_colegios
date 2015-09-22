@@ -18,7 +18,7 @@ class AplRefUsuarioController extends BaseController{
         try {
             $statusCode = 200;
             $message = "OK";
-            $response = Aplrefusuario::paginate($limit=100);
+            $response = Aplrefusuario::paginate(100);
 
         } catch (Exception $e) {
             $statusCode = 400;
@@ -38,7 +38,7 @@ class AplRefUsuarioController extends BaseController{
         try {
             $statusCode = 200;
             $message = "OK";
-            $response = Aplrefusuario::where('id','=',$id)->paginate($limit=100);
+            $response = Aplrefusuario::where('id','=',$id);
             //$response = $response::paginate($limit=100);
 
         } catch (Exception $e) {

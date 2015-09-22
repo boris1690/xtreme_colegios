@@ -30,6 +30,7 @@ class Aplrefusuario extends Eloquent implements UserInterface, RemindableInterfa
 	public function getReminderEmail()
 	{
 		// TODO: Implement getReminderEmail() method.
+		return $this->email;
 	}
 
 	/**
@@ -40,6 +41,7 @@ class Aplrefusuario extends Eloquent implements UserInterface, RemindableInterfa
 	public function getAuthIdentifier()
 	{
 		// TODO: Implement getAuthIdentifier() method.
+		return $this->getKey();
 	}
 
 	/**
@@ -50,6 +52,7 @@ class Aplrefusuario extends Eloquent implements UserInterface, RemindableInterfa
 	public function getAuthPassword()
 	{
 		// TODO: Implement getAuthPassword() method.
+		return $this->password;
 	}
 
 	/**
