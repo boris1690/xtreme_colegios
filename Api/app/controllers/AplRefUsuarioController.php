@@ -49,8 +49,6 @@ class AplRefUsuarioController extends BaseController{
             $response['message'] = $message;
         }
 
-
-
         return Response::json($response, $statusCode);
     }
 
