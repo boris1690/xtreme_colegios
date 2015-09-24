@@ -13,12 +13,16 @@
             }
 
             var set = function(){
-              labels.colegio = $scope.colegio;
-              labels.email = $scope.email;
-              labels.password = $scope.password;
+              labels.colegio = $scope.frm.colegio;
+              labels.email = $scope.frm.email;
+              labels.password = $scope.frm.password;
             }
 
-            return {set:set,get:labels}
+            var get = function(){
+                return labels;
+            }
+
+            return {set:set,get:get}
 
         }();
         //endregion
@@ -26,7 +30,10 @@
 
 
         logeoService.getColegios().then(function (data) {
-          console.log(data);
+
+          objecResp = new decodeJson(data);
+
+          $scope.colegios = objecResp.data;
 
         }, function(reason){
 
@@ -34,28 +41,24 @@
           alert('Got notification: ' + update);
         });
 
+
+
         $scope.ejecuta = function()
         {
-          objeto.set();
+            objeto.set();
 
-          logeoService.login(objeto.get()).then(function (data) {
-            if(data.status===200)
-            {
-              objecData = data.data.data;
 
-              $localStorage.token = objecData.token;
-              $localStorage.usua_codigo = objecData.usua_codigo;
-              $localStorage.$save();
+            logeoService.login(objeto.get()).then(function (data) {
 
-              // redirecciono a entorno
-              $window.location.href = './views/00_paginas/entorno.html';
-            }
-            else
-            {
-              mostrarMensajeError(data.error.error);
-            }
+                objecResp = new decodeJson(data);
+                
 
-          });
+
+            }, function(reason){
+
+            }, function(update){
+                alert('Got notification: ' + update);
+            });
 
         };
     }])

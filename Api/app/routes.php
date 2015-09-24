@@ -109,12 +109,15 @@ Route::get('/publicocolegios',  function()
         $statusCode = 200;
         $message = "OK";
         $response = DB::table('apl_dat_colegio')->where('estado_colegio','=','A')->paginate($limit = 100);
+
+        $response = $response->addQuery('key','value');
         //$response = $response::paginate($limit=100);
 
     } catch (Exception $e) {
         $statusCode = 400;
         $message = $e->getMessage();
     } finally {
+
         $response['status'] = $statusCode;
         $response['message'] = $message;
     }

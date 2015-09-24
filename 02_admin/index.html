@@ -51,8 +51,9 @@
                                 <p class="text-center m-t-md">Sistema academico.</p>
                                 <form class="m-t-md" ng-submit="ejecuta()">
                                     <div class="form-group">
-                                        <select class="form-control m-b-sm" ng-model="frm.colegio">
-
+                                        <select class="form-control m-b-sm" ng-model="frm.colegio" required>
+                                            <option value="">Seleccione colegio...</option>
+                                            <option ng-repeat="colegio in colegios" value="{{colegio.id}}">{{colegio.nombre_colegio}} </option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -62,11 +63,11 @@
                                         <input type="password" class="form-control" placeholder="Password" ng-model="frm.password" required>
                                     </div>
                                     <button type="submit" class="btn btn-success btn-block">Login</button>
-                                    <a href="forgot.html" class="display-block text-center m-t-md text-sm">Forgot Password?</a>
-                                    <p class="text-center m-t-xs text-sm">Do not have an account?</p>
-                                    <a href="register.html" class="btn btn-default btn-block m-t-md">Create an account</a>
+                                    <a href="forgot.html" class="display-block text-center m-t-md text-sm">¿Olvid&oacute; su clave?</a>
+                                    <!--<p class="text-center m-t-xs text-sm">Do not have an account?</p>
+                                    <a href="register.html" class="btn btn-default btn-block m-t-md">Create an account</a>-->
                                 </form>
-                                <p class="text-center m-t-xs text-sm">2015 &copy; Modern by Steelcoders.</p>
+                                <p class="text-center m-t-xs text-sm">2015 &copy; Xcolegios by Xweb.</p>
                             </div>
                         </div>
                     </div><!-- Row -->
@@ -87,7 +88,7 @@
         <script src="assets/plugins/offcanvasmenueffects/js/classie.js"></script>
         <script src="assets/plugins/waves/waves.min.js"></script>
         <script src="assets/js/modern.min.js"></script>
-
+        <script src="assets/js/functions.js"></script>
 
         <!-- all expr angular-->
         <script src="assets/js/01_core/lib/angular.js"></script>
