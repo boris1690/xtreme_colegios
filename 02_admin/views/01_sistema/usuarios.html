@@ -1,0 +1,120 @@
+<div class="page-head">
+    <div class="row">
+        <div class="col-sm-10 col-md-10">
+            <h2>Usuarios</h2>
+            <ol class="breadcrumb">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Administraci&oacute;n</a></li>
+                <li class="active">Usuarios</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<form role="formUsuario">
+<div class="cl-mcont">
+    <div class="row">
+        <div class="col-sm-6 col-md-6">
+            <div class="block-flat">
+                <div class="content">
+
+                        <input type="hidden" value="" ng-model="form.codigo"/>
+                        <div class="form-group">
+                            <label>Perfil <span class="text-danger">*</span></label>
+                            <select class="form-control" ng-model="form.perfil" required>
+                                <option ng-repeat="itemperfil in perfiles" value="{{itemperfil.perf_codigo}}" ng-selected="itemperfil.perf_codigo == perfiles[0].perf_codigo">{{itemperfil.perf_nombre}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Departamento <span class="text-danger">*</span></label>
+                            <select class="form-control" ng-model="form.departamento" required>
+                                <option ng-repeat="itemdepartamento in departamentos" value="{{itemdepartamento.depa_codigo}}" ng-selected="itemdepartamento.depa_codigo == departamentos[0].depa_codigo">{{itemdepartamento.depa_nombre}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo <span class="text-danger">*</span></label>
+                            <select class="form-control" ng-model="form.tipo" required>
+                                <option ng-repeat="itemtipo in tipos" value="{{itemtipo.regi_codigo}}" ng-selected="itemtipo.regi_codigo == tipos[0].regi_codigo">{{itemtipo.regi_nombre}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Seccion <span class="text-danger">*</span></label>
+                            <select class="form-control" ng-model="form.seccion" required>
+                                <option ng-repeat="seccion in secciones" value="{{seccion.regi_codigo}}" ng-selected="seccion.regi_codigo == secciones[0].regi_codigo">{{seccion.regi_nombre}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Liderazgo <span class="text-danger">*</span></label>
+                            <select class="form-control" ng-model="form.liderazgo" required>
+                                <option ng-repeat="itemliderazgo in liderazgos" value="{{itemliderazgo.regi_codigo}}" ng-selected="itemliderazgo.regi_codigo == liderazgos[0].regi_codigo">{{itemliderazgo.regi_nombre}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombres <span class="text-danger">*</span></label>
+                            <input type="textbox" ng-model="form.nombre" class="form-control" onkeypress="letterOrNumber(0,event);" maxlength="120" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Apellidos <span class="text-danger">*</span></label>
+                            <input type="textbox" ng-model="form.apellido" class="form-control" id="txtApellido" onkeypress="letterOrNumber(0,event);" maxlength="120" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Cédula <span class="text-danger">*</span></label>
+                            <input type="textbox" ng-model="form.cedula" class="form-control" id="txtCedula" minlength="10" maxlength="10" onkeypress="letterOrNumber(1,event);" required>
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail <span class="text-danger">*</span></label>
+                            <input type="email" ng-model="form.email" class="form-control" id="txtEmail" maxlength="200" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Foto <span class="text-danger">*</span></label>
+                            <input type="file" id="file" file-model="form.foto"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Estado <span class="text-danger">*</span></label>
+                            <select ng-model="form.estado" class="form-control" required>
+                                <option value='A'>Activo</option>
+                                <option value='I'>Inactivo</option>
+                            </select>
+                        </div>
+                        <div class="spacer2 text-center">
+                            <button class="btn btn-primary btn-flat md-trigger" ng-disabled="form.codigo" data-modal="form-primary" ng-click="accion('I')">Ingresar</button>
+                            <button id="btnActualizar" class="btn btn-primary btn-flat md-trigger" ng-disabled="!form.codigo" data-modal="form-primary" ng-click="accion('A')">Actualizar</button>
+                            <button id="btnEliminar" class="btn btn-primary btn-flat md-trigger" ng-disabled="!form.codigo" data-modal="form-primary" data-toggle="modal" data-target="#mod-warning">Eliminar</button>
+                            <button id="btnLimpiar" class="btn btn-primary btn-flat md-trigger" ng-disabled="form.codigo" data-modal="form-primary" ng-click="limpiar()">Limpiar</button>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6">
+            <div class="block-flat">
+                <div class="content">
+                    <div>
+                        <form-lista></form-lista>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+<!-- Modal Warning -->
+<div class="modal fade" id="mod-warning" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <div class="i-circle warning"><i class="fa fa-warning"></i></div>
+                    <h4>Warning!</h4>
+                    <p>¿Está seguro de Eliminar el Usuario?</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="btnCancel">Cancel</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal" id="btnProceed">Proceed</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

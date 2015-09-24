@@ -1,0 +1,191 @@
+<div class="page-head">
+    <h2>Rendir Evaluaciones</h2>
+    <ol class="breadcrumb">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Evaluación</a></li>
+        <li class="active">Rendir Evaluaciones</li>
+    </ol>
+</div>
+
+<div class="cl-mcont">
+
+    <div class="row">
+
+        <div class="block-flat">
+            <div class="header">
+                <h3>Bienvenida {{usuario.usua_nombre}} {{usuario.usua_apellido}}</h3>
+                Debajo encontrarás el listado de evaluaciones que debes completar. Recuerda realizar este proceso con el mejor criterio posible por el bien de la Institución y de nuestra mejora continua.<br><br>
+            </div>
+            <div class="content">
+                <div class="list-group tickets">
+                    <li class="list-group-item" href="#" ng-style="{'background-color': evaluacion.eval_usua_estado=='F'?'#D3D3D3':''}"
+                        ng-repeat="evaluacion in evaluaciones | orderBy:['-eval_usua_estado','rela_orden']">
+
+                        <div class="col-sm-4 col-md-4">
+                            <img class="avatar" style="width: 55px"
+                                 ng-src="{{evaluacion.usua_foto}}?v={{rand}}"/>
+                            <h4 class="name" style="margin-top: 7px;">{{evaluacion.usua_nombre}} {{evaluacion.usua_apellido}}</h4>
+                            <p>{{evaluacion.depa_nombre}}</p>
+                            <b class="text-primary">Evaluar como {{evaluacion.rela_nombre}}</b>
+                        </div>
+                        <div class="col-sm-6 col-md-6" style="top:16px">
+                            <!--<i class="fa fa-3x pull-left " ng-class="evaluacion.eval_usua_estado=='P'?'fa-rocket color-danger':evaluacion.eval_usua_estado=='F'?'fa-thumbs-o-up color-success':evaluacion.eval_usua_estado=='G'?'fa-clock-o color-primary':''"></i>-->
+                            <span>
+                                <h4 class="name" style="text-align: center" ng-class="evaluacion.eval_usua_estado=='P'?'text-danger':evaluacion.eval_usua_estado=='F'?'text-primary':evaluacion.eval_usua_estado=='G'?'text-success':''">Evaluaci&oacute;n<br>{{evaluacion.eval_usua_estado=='P'?'Pendiente':evaluacion.eval_usua_estado=='F'?'Finalizada':evaluacion.eval_usua_estado=='G'?'En proceso':''}}</h4>
+                            </span>
+                        </div>
+                        <div class="col-sm-2 col-md-2" style="top:16px">
+                            <span class="pull-right">
+                                <button class="btn btn-success btn-flat btn-rad md-trigger"
+                                        ng-show="evaluacion.eval_usua_estado=='P' || evaluacion.eval_usua_estado=='G'" data-modal="reply-ticket"
+                                        ng-click="recuperaEvaluacion(evaluacion,$index)">Evaluar
+                                </button>
+                                <div ng-show="evaluacion.eval_usua_estado=='F'" class="badge badge-primary">
+                                    <i class="fa fa-check sign">
+                                        <span class="badge-primary">&nbsp;Finalizada</span>
+                                    </i>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+                </div>
+
+                <!-- Nifty Modal -->
+                <div class="md-modal md-effect-12" id="reply-ticket" style="width:90%;max-width:100%;height: 100vh;">
+
+                    <div class="md-content" style="overflow:visible">
+                        <div class="modal-body form" style="overflow: auto;">
+                            <div class="list-group tickets">
+                                <li class="list-group-item" href="#">
+                                    <span class="pull-right"><button type="button" class="close md-close"
+                                                                     data-dismiss="modal"
+                                                                     aria-hidden="true">&times;</button></span> <img
+                                        class="avatar" style="width: 55px"
+                                        ng-src="{{rendir.foto}}?v={{rendir.rand}}"/>
+                                    <h4 class="name" style="margin-top: 7px;">{{rendir.nombre}}</h4>
+
+                                    <p>{{rendir.departamento}}</p>
+                                    <b class="text-primary">Evaluar como {{rendir.relacion}}</b>
+                                </li>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 fuelux">
+                                    <div class="block-wizard">
+                                        <div id="wizard1" class="wizard wizard-ux">
+                                            <ul class="steps" >
+                                                <!--<li href="#step1" class="active">Step 1<span class="chevron"></span></li>
+                                                <li href="#step2" class="">Step 2<span class="chevron"></span></li>-->
+                                                <li class="{{tab>($index+1)?'':(tab==($index+1)?'complete':'')}}" ng-repeat="(key, value) in competenciaconducta | groupBy: 'regi_nombre'">{{key}}<span class="chevron"></span></li>
+                                            </ul>
+                                            <div class="actions" ng-show="totalcompetencia>1">
+                                                <button type="button" class="btn btn-xs btn-prev btn-default"  ng-click="selectTab('A')"><i
+                                                        class="icon-arrow-left"></i>Anterior
+                                                </button>
+                                                <button type="button" class="btn btn-xs btn-next btn-default"
+                                                         ng-click="submitted=true && selectTab('S')">Siguiente<i class="icon-arrow-right"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="step-content">
+                                            <form class="form-horizontal group-border-dashed" name="myForm" ng-submit="guardaevaluacion('F')" >
+                                                <input type="hidden" value=""
+                                                       ng-model="formrendir.evaluador"/>
+                                                <input type="hidden" value=""
+                                                       ng-model="formrendir.evaluado"/>
+                                                <input type="hidden" value=""
+                                                       ng-model="formrendir.evaluacion"/>
+                                                <input type="hidden" value=""
+                                                       ng-model="formrendir.intevaluacion"/>
+
+                                                <div class="step-pane" ng-class="tab==($index+1)?'active':''" id="step{{$index+1}}" ng-repeat="(key_1, value_1) in competenciaconducta | groupBy: 'regi_nombre' ">
+                                                    <div class="tab-content" style="width:100%;height:50vh;overflow-y:scroll;">
+                                                        <div class="form-group">
+                                                            <table class="no-border">
+                                                                <tbody ng-repeat="item_1 in value_1 | groupBy: 'comp_nombre' | toArray:true | orderBy:'comp_orden' ">
+                                                                <tr>
+                                                                    <th width="75%" style="width:50%;">
+                                                                        <strong class="text-primary">{{item_1.$key}}</strong></th>
+                                                                    <th width="5%" align="center" style="vertical-align:middle;text-align: center;padding: 7px;background-color: #F2F2F2" class="text-13 text-danger">No Observado</th>
+                                                                    <th width="5%" align="center" style="vertical-align:middle;text-align: center;padding: 7px;" class="text-13">Necesita Mejorar Mucho</th>
+                                                                    <th width="5%" align="center" style="vertical-align:middle;text-align: center;padding: 7px;" class="text-13">Necesita Mejorar</th>
+                                                                    <th width="5%" align="center" style="vertical-align:middle;text-align: center;padding: 7px;" class="text-13">H&aacute;bil</th>
+                                                                    <th width="5%" align="center" style="vertical-align:middle;text-align: center;padding: 7px;" class="text-13">Muy H&aacute;bil</th>
+                                                                </tr>
+                                                                <tr ng-repeat="evaluacion in item_1">
+                                                                    <td style="width:30%;">
+                                                                        <span class="black-color text-13">{{evaluacion.cond_nombre}}</span>
+                                                                    </td>
+                                                                    <td class="text-center" style="background-color: #F2F2F2"><input type="radio"
+                                                                                                   ng-model="evaluacion.checked"
+                                                                                                   value="0"
+                                                                                                   name="{{evaluacion.cond_codigo}}"
+                                                                                                   ng-class="{true: 'parsley-error'}[submitted && form.evaluacion.$invalid]"
+                                                                                                   required/></td>
+                                                                    <td class="text-center"><input type="radio"
+                                                                                                   ng-model="evaluacion.checked"
+                                                                                                   value="1"
+                                                                                                   name="{{evaluacion.cond_codigo}}"
+                                                                                                   ng-class="{true: 'parsley-error'}[submitted && form.evaluacion.$invalid]"
+                                                                                                   required/></td>
+                                                                    <td class="text-center"><input type="radio"
+                                                                                                   ng-model="evaluacion.checked"
+                                                                                                   value="2"
+                                                                                                   name="{{evaluacion.cond_codigo}}"
+                                                                                                   ng-class="{true: 'parsley-error'}[submitted && form.evaluacion.$invalid]"
+                                                                                                   required/></td>
+                                                                    <td class="text-center"><input type="radio"
+                                                                                                   ng-model="evaluacion.checked"
+                                                                                                   value="3"
+                                                                                                   name="{{evaluacion.cond_codigo}}"
+                                                                                                   ng-class="{true: 'parsley-error'}[submitted && form.evaluacion.$invalid]"
+                                                                                                   required/></td>
+                                                                    <td class="text-center"><input type="radio"
+                                                                                                   ng-model="evaluacion.checked"
+                                                                                                   value="4"
+                                                                                                   name="{{evaluacion.cond_codigo}}"
+                                                                                                   ng-class="{true: 'parsley-error'}[submitted && form.evaluacion.$invalid]"
+                                                                                                   required/></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <br>
+
+                                                            <div class="col-sm-12" ng-if="rendir.codigorelacion==8 && tab==totalcompetencia">
+                                                                <label class="col-sm-12 " ng-if="rendir.codigorelacion==8">Describe en este espacio logros específicos que consideras contribuyeron al alcance de algún objetivo estratégico (opcional)</label>
+                                                            </div>
+
+                                                            <div class="col-sm-12" ng-if="rendir.codigorelacion==8 && tab==totalcompetencia">
+                                                                <textarea rows="4" class="form-control" ng-model="formrendir.comentarios"></textarea>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+
+                                                    <button  type="button" class="btn btn-default btn-flat" ng-click="guardaevaluacion('G')">
+                                                        Guardar
+                                                    </button>
+
+                                                    <button ng-show="totalcompetencia!=tab" type="submit" class="btn btn-primary btn-flat" ng-click="submitted=true && selectTab('S')">Siguiente <i class="fa fa-caret-right"></i>
+                                                    </button>
+
+                                                    <button ng-show="totalcompetencia==tab"  type="submit" class="btn btn-success wizard-next" ng-click="submitted=true && validaForm()"><i class="fa fa-check"></i> Finalizar
+                                                    </button>
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-overlay"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,18 @@
+<div class="content">
+    <div>
+        <table class="table table-bordered" id="datatable-icons" >
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Accion</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr class="odd gradeX" ng-repeat="item in usuarios" on-finish-render="initDataTable()">
+                    <td>{{item.nombre}}</td>
+                    <td class="text-center"><a style="cursor: pointer" ng-click="seleccionar(item.usua_codigo)"><i class="fa fa-pencil"></i></a><a style="cursor: pointer" data-toggle="modal" data-target="#mod-warning" onclick="cargarCodigo(this);"><i class="fa fa-trash-o color-danger"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

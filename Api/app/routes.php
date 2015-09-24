@@ -66,17 +66,19 @@ Route::post('login', function()
 
             // Genero la Data
             $data['0']['auth_token'] = $token;
-            $response = Paginator::make($items = $data, $totalItems = 1, $perPage = 1);
 
         } else {
-
+            $message = 'Credenciales incorrectas';
+            $statusCode = 401;
         }
     } catch (Exception $e) {
         $statusCode = 400;
         $message = $e->getMessage();
     } finally {
+        $response = Paginator::make($items = $data, $totalItems = 1, $perPage = 1);
         $response['status'] = $statusCode;
         $response['message'] = $message;
+
     }
 
     return Response::json($response, $statusCode);

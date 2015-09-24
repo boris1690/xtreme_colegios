@@ -1,0 +1,583 @@
+<div class="page-head">
+    <h2>Informe de Evaluaciones</h2>
+    <ol class="breadcrumb">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Evaluación</a></li>
+        <li class="active">Informe de Evaluaciones</li>
+    </ol>
+</div>
+
+<div class="cl-mcont">
+
+    <div class="row">
+
+        <div class="col-sm-12 col-md-12">
+
+            <div class="content" id="divBuscar">
+
+                <div class="col-sm-4 col-md-4">
+                    <label>Evaluación</label>
+                    <select class="form-control clientes" name="cboClie" ng-model="formCons.evaluacion">
+                        <option ng-repeat="evaluacion in evaluaciones" value="{{evaluacion.eval_codigo}}">{{evaluacion.eval_fechainicio}} - {{evaluacion.eval_fechafin}} </option>
+                    </select>
+                </div>
+
+                <div class="col-sm-4 col-md-4">
+                    <label>Area / Departamento</label>
+                    <select class="form-control clientes" name="cboClie" ng-model="formCons.departamento">
+                        <option value="">Todas ...</option>
+                        <option ng-repeat="departamento in departamentos" value="{{departamento.depa_codigo}}">{{departamento.depa_nombre}}</option>
+                    </select>
+                </div>
+
+                <div class="col-sm-2 col-md-2" style="padding-top:25px;">
+                    <button type="button" class="btn btn-primary btn-flat md-close" ng-click="consultaInformes()">Consultar</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="content">
+                <div>
+
+                    <table class="table table-bordered" datatable="ng" dt-options="informe.dtOptions" dt-column-defs="informe.dtColumnDefs" >
+                        <thead>
+                        <tr>
+                            <th class="text-center"><strong>Evaluado</strong></th>
+                            <th class="text-center"><strong>No. Evaluaciones</br>Totales</strong></th>
+                            <th class="text-center"><strong>No. Evaluaciones</br>Finalizadas</strong></th>
+                            <th class="text-center"><strong>Completado</strong></th>
+                            <th class="text-center"><strong>Informe</strong></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <!-- lista de usuarios -->
+                            <tr ng-repeat="informe in listaInformes">
+                                <td>{{informe.usua_nombre}} {{informe.usua_apellido}}</td>
+                                <td class="text-center">{{informe.eval_total}}</td>
+                                <td class="text-center">{{informe.eval_finalizadas}}</td>
+                                <td class="text-center text-success">{{informe.eval_porcentaje}}%</td>
+                                <td class="text-center"><a style="cursor: pointer" ng-click="consultaInforme(informe)"><i class="fa fa-file-text color-success"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Nifty Modal -->
+<!--<div class="md-modal colored-header custom-width md-effect-9" id="modal-tab-not">
+    <div class="md-content">
+        <div class="modal-header">
+            <h3>Informe de Evaluaciones</h3>
+            <button type="button" class="close md-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body form">
+
+            <div class="list-group tickets">
+                <div class="list-group-item" href="#">
+                    <div class="col-sm-4 col-md-4">
+                        <img class="avatar" style="width: 55px"
+                             ng-src="{{informe.usua_foto}}?v={{rand}}"/>
+                        <h4 class="name" style="margin-top: 7px;">Nombre</h4>
+                        <p>Departamento</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <table>
+                    <tr>
+                        <td>
+                            Competencia
+                        </td>
+                        <td>
+                            Valor
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6">
+                sdadaasd
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default btn-flat md-close" data-dismiss="modal">Salir</button>
+            <button type="button" class="btn btn-primary btn-flat" ng-click="ingresarEvaluacion()" data-dismiss="modal">Registrar</button>
+        </div>
+    </div>
+
+</div>-->
+
+<div class="md-modal colored-header custom-width md-effect-9" id="modal-tab-not" style="width:90%;max-width:100%;height: 100vh;">
+    <div class="md-content">
+        <div class="modal-header">
+            <h3>Informe por Evaluaciones</h3>
+            <button type="button" class="close md-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body form" style="overflow: auto">
+
+            <div class="list-group tickets">
+                <div class="list-group-item" href="#">
+                    <div class="col-sm-4 col-md-4">
+                        <img class="avatar" style="width: 55px"
+                             ng-src="{{informe.usua_foto}}?v={{rand}}"/>
+                        <h4 class="name" style="margin-top: 7px;">Nombre</h4>
+                        <p>Departamento</p>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .tableInforme
+                {
+
+                }
+
+                .tableInforme tr td,th
+                {
+                    text-align: center;
+                    font-weight: normal;
+                    padding: 5px;
+                }
+
+                .tableInforme tr td:first-child
+                {
+                    background-color: #C9C3BA;
+                }
+
+                .tableInforme tr td:last-child
+                {
+                    background-color: #FFF7E1;
+                }
+
+
+                .tableInforme tr:first-child
+                {
+                    background-color: #B93E40;
+                }
+
+                .tableInforme tr:last-child td:first-child
+                {
+                    background-color: white;
+                }
+
+                .tableInforme tr:last-child td:last-child
+                {
+                    background-color: #FDEAC7;
+                }
+
+
+
+            </style>
+
+            <div class="form-group" style="overflow: scroll;height: 58vh">
+
+                <div class="col-md-6">
+                    <div class="text-center" style="color:#4C7196;font-weight: bold;font-size: 12pt;margin: 8px">Competencias Pedagógicas</div>
+                    <table class="tableInforme">
+
+                        <tr>
+                            <th align="center" style="color: white">
+                                Competencia
+                            </th>
+                            <th align="center" style="color: white">
+                                Valor
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Planificación - Organizacion
+                            </td>
+                            <td>
+                                2.5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Gestion del Aprendizaje
+                            </td>
+                            <td>
+                                3.6
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+                                3.2
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <div id="chartdiv" style="width:600px; height:400px;"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center" style="color:#4C7196;font-weight: bold;font-size: 12pt;margin: 8px">Valores Organizacionales</div>
+                    <table class="tableInforme">
+
+                        <tr>
+                            <th align="center" style="color: white">
+                                Competencia
+                            </th>
+                            <th align="center" style="color: white">
+                                Valor
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Servir para transcender
+                            </td>
+                            <td>
+                                2.5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Libertad
+                            </td>
+                            <td>
+                                3.6
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+                                3.2
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <div id="chartdiv2" style="width:600px; height:400px;"></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="text-center" style="color:#4C7196;font-weight: bold;font-size: 12pt;margin: 8px">Ranking por Relación - Competencias Pedagógicas</div>
+                    <table class="tableInforme">
+
+                        <tr>
+                            <th align="center" style="color: white">
+                                Competencia
+                            </th>
+                            <th align="center" style="color: white">
+                                Autoevaluación
+                            </th>
+                            <th align="center" style="color: white">
+                                Promedio
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Gestión del Aprendizaje
+                            </td>
+                            <td>
+                                1.9
+                            </td>
+                            <td>
+                                2.5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Planificación - Organización
+                            </td>
+                            <td>
+                                1.5
+                            </td>
+                            <td>
+                                3.6
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                1.4
+                            </td>
+                            <td>
+                                3.2
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-12">
+                    <div id="chartdiv3" style="width:100%; height:400px;"></div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-flat md-close" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary btn-flat md-close" data-dismiss="modal">Proceed</button>
+        </div>
+    </div>
+</div>
+
+<div class="md-overlay"></div>
+
+<script>
+    var chart;
+
+    var chartData = [
+        {
+            "country": "Czech Republic",
+            "litres": 156.9
+        },
+        {
+            "country": "Ireland",
+            "litres": 131.1
+        },
+        {
+            "country": "Germany",
+            "litres": 115.8
+        },
+        {
+            "country": "Australia",
+            "litres": 109.9
+        },
+        {
+            "country": "Austria",
+            "litres": 108.3
+        },
+        {
+            "country": "UK",
+            "litres": 99
+        }
+    ];
+
+    AmCharts.ready(function () {
+        // RADAR CHART
+        chart = new AmCharts.AmRadarChart();
+        chart.dataProvider = chartData;
+        chart.categoryField = "country";
+        chart.startDuration = 2;
+
+        // VALUE AXIS
+        var valueAxis = new AmCharts.ValueAxis();
+        valueAxis.axisAlpha = 0.15;
+        valueAxis.minimum = 0;
+        valueAxis.dashLength = 3;
+        valueAxis.axisTitleOffset = 20;
+        valueAxis.gridCount = 5;
+        chart.addValueAxis(valueAxis);
+
+        // GRAPH
+        var graph = new AmCharts.AmGraph();
+        graph.valueField = "litres";
+        graph.bullet = "round";
+        graph.balloonText = "[[value]] litres of beer per year";
+        chart.addGraph(graph);
+
+        // WRITE
+        chart.write("chartdiv");
+
+    });
+
+    AmCharts.ready(function () {
+        // RADAR CHART
+        chart = new AmCharts.AmRadarChart();
+        chart.dataProvider = chartData;
+        chart.categoryField = "country";
+        chart.startDuration = 2;
+
+        // VALUE AXIS
+        var valueAxis = new AmCharts.ValueAxis();
+        valueAxis.axisAlpha = 0.15;
+        valueAxis.minimum = 0;
+        valueAxis.dashLength = 3;
+        valueAxis.axisTitleOffset = 20;
+        valueAxis.gridCount = 5;
+        chart.addValueAxis(valueAxis);
+
+        // GRAPH
+        var graph = new AmCharts.AmGraph();
+        graph.valueField = "litres";
+        graph.bullet = "round";
+        graph.balloonText = "[[value]] litres of beer per year";
+        chart.addGraph(graph);
+
+        // WRITE
+        chart.write("chartdiv2");
+
+    });
+</script>
+
+<script>
+    var chart;
+    var graph;
+
+    var chartData2 = [
+        {"year":"1950", "v1":-10, "v2":-26},
+        {"year":"1951", "v1":-20, "v2":-45},
+        {"year":"1952", "v1":5, "v2":-14},
+        {"year":"1953", "v1":3, "v2":6},
+        {"year":"1954", "v1":-9, "v2":18},
+        {"year":"1955", "v1":4, "v2":-8},
+        {"year":"1956", "v1":-20, "v2":-35},
+        {"year":"1957", "v1":-15, "v2":-37},
+        {"year":"1958", "v1":-10, "v2":27},
+        {"year":"1959", "v1":7, "v2":-14},
+        {"year":"1960", "v1":4, "v2":8},
+        {"year":"1961", "v1":3, "v2":-6},
+        {"year":"1962", "v1":5, "v2":9},
+        {"year":"1963", "v1":-15, "v2":-38},
+        {"year":"1964", "v1":2, "v2":-3},
+        {"year":"1965", "v1":5, "v2":-10},
+        {"year":"1966", "v1":0.7, "v2":-48},
+        {"year":"1967", "v1":0.2, "v2":22},
+        {"year":"1968", "v1":1.1, "v2":-22},
+        {"year":"1969", "v1":-0.2, "v2":-49},
+        {"year":"1970", "v1":1.5, "v2":-2},
+        {"year":"1971", "v1":-0.3, "v2":-37},
+        {"year":"1972", "v1":-20, "v2":-44},
+        {"year":"1973", "v1":-9, "v2":18},
+        {"year":"1974", "v1":10, "v2":-17},
+        {"year":"1975", "v1":-13, "v2":-33},
+        {"year":"1976", "v1":16, "v2":-45},
+        {"year":"1977", "v1":-12, "v2":2},
+        {"year":"1978", "v1":15, "v2":18},
+        {"year":"1979", "v1":-13, "v2":-24},
+        {"year":"1980", "v1":15, "v2":14},
+        {"year":"1981", "v1":-15, "v2":-28},
+        {"year":"1982", "v1":17, "v2":-6},
+        {"year":"1983", "v1":11, "v2":-1},
+        {"year":"1984", "v1":19, "v2":-26},
+        {"year":"1985", "v1":18, "v2":0},
+        {"year":"1986", "v1":15, "v2":-27},
+        {"year":"1987", "v1":114, "v2":26},
+        {"year":"1988", "v1":-15, "v2":26},
+        {"year":"1989", "v1":18, "v2":-45},
+        {"year":"1990", "v1":13, "v2":-23},
+        {"year":"1991", "v1":12, "v2":-21},
+        {"year":"1992", "v1":-12, "v2":-31},
+        {"year":"1993", "v1":18, "v2":-12},
+        {"year":"1994", "v1":3, "v2":-35},
+        {"year":"1995", "v1":1, "v2":-1},
+        {"year":"1996", "v1":19, "v2":-14},
+        {"year":"1997", "v1":-11, "v2":11},
+        {"year":"1998", "v1":1.1, "v2":-29},
+        {"year":"1999", "v1":-0.2, "v2":11},
+        {"year":"2000", "v1":-0.4, "v2":-18},
+        {"year":"2001", "v1":0.6, "v2":-12},
+        {"year":"2002", "v1":1.5, "v2":-3},
+        {"year":"2003", "v1":0.6, "v2":-47},
+        {"year":"2004", "v1":1.5, "v2":-43},
+        {"year":"2005", "v1":0.1, "v2":-18},
+        {"year":"2006", "v1":0, "v2":7},
+        {"year":"2007", "v1":0.5, "v2":-25},
+        {"year":"2008", "v1":1.5, "v2":-50},
+        {"year":"2009", "v1":0.4, "v2":28},
+        {"year":"2010", "v1":0.7, "v2":25},
+        {"year":"2011", "v1":0.4, "v2":-16},
+        {"year":"2012", "v1":-0.2, "v2":5},
+        {"year":"2013", "v1":0.2, "v2":-17},
+        {"year":"2014", "v1":-0.5, "v2":-22}
+    ];
+
+
+    AmCharts.ready(function () {
+        // SERIAL CHART
+        chart = new AmCharts.AmSerialChart();
+
+        chart.dataProvider = chartData2;
+        chart.marginLeft = 10;
+        chart.categoryField = "year";
+        chart.dataDateFormat = "YYYY";
+
+        // listen for "dataUpdated" event (fired when chart is inited) and call zoomChart method when it happens
+        chart.addListener("dataUpdated", zoomChart);
+
+        // AXES
+        // category
+        var categoryAxis = chart.categoryAxis;
+        categoryAxis.parseDates = true; // as our data is date-based, we set parseDates to true
+        categoryAxis.minPeriod = "YYYY"; // our data is yearly, so we set minPeriod to YYYY
+        categoryAxis.dashLength = 3;
+        categoryAxis.minorGridEnabled = true;
+        categoryAxis.minorGridAlpha = 0.1;
+
+        // value
+        var valueAxis = new AmCharts.ValueAxis();
+        valueAxis.id = "ax1";
+        valueAxis.axisAlpha = 0;
+        valueAxis.inside = true;
+        valueAxis.dashLength = 3;
+        valueAxis.position = "right";
+        chart.addValueAxis(valueAxis);
+
+        var valueAxis2 = new AmCharts.ValueAxis();
+        valueAxis2.id = "ax2";
+        valueAxis2.axisAlpha = 0;
+        valueAxis2.inside = true;
+        valueAxis2.dashLength = 3;
+        valueAxis2.baseValue = -20;
+        valueAxis2.position = "left";
+        chart.addValueAxis(valueAxis2);
+
+        // GRAPH
+        graph = new AmCharts.AmGraph();
+        graph.type = "smoothedLine"; // this line makes the graph smoothed line.
+        graph.lineColor = "#d1655d";
+        graph.negativeLineColor = "#637bb6"; // this line makes the graph to change color when it drops below 0
+        graph.bullet = "round";
+        graph.bulletSize = 8;
+        graph.bulletBorderColor = "#FFFFFF";
+        graph.bulletBorderAlpha = 1;
+        graph.bulletBorderThickness = 2;
+        graph.lineThickness = 2;
+        graph.valueField = "v1";
+        graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[value]]</span></b>";
+        chart.addGraph(graph);
+
+        graph2 = new AmCharts.AmGraph();
+        graph2.valueaxis = "ax2";
+        graph2.type = "smoothedLine";
+        graph2.lineColor = "#d1655d";
+        graph2.negativeLineColor = "#637bb6";
+        graph2.bullet = "round";
+        graph2.bulletSize = 8;
+        graph2.bulletBorderColor = "#FFFFFF";
+        graph2.bulletBorderAlpha = 1;
+        graph2.bulletBorderThickness = 2;
+        graph2.lineThickness = 2;
+        graph2.valueField = "v2";
+        graph2.title = "title v2";
+        graph2.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[value]]</span></b>";
+        chart.addGraph(graph2);
+
+        // CURSOR
+        var chartCursor = new AmCharts.ChartCursor();
+        chartCursor.cursorAlpha = 0;
+        chartCursor.cursorPosition = "mouse";
+        chartCursor.categoryBalloonDateFormat = "YYYY";
+        chart.addChartCursor(chartCursor);
+
+        // SCROLLBAR
+        var chartScrollbar = new AmCharts.ChartScrollbar();
+        chart.addChartScrollbar(chartScrollbar);
+
+        chart.creditsPosition = "bottom-right";
+
+        // WRITE
+        chart.write("chartdiv3");
+    });
+
+    // this method is called when chart is first inited as we listen for "dataUpdated" event
+    function zoomChart() {
+        // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
+        chart.zoomToDates(new Date(1972, 0), new Date(1984, 0));
+    }
+</script>
