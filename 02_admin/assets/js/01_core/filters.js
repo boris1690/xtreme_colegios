@@ -1,6 +1,6 @@
 (function () {
 
-  angular.module('delta.filters', [])
+  angular.module('Navigate.filters', [])
     .filter('normalize', function () {
       return function (input) {
           if (!input) return "";

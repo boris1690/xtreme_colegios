@@ -3,6 +3,7 @@
   angular.module('login.controllers', [])
     .controller('LogeoController', ['$scope', '$routeParams', 'logeoService','$location','$rootScope','$localStorage','$window', function ($scope, $routeParams, logeoService,$location,$rootScope,$localStorage,$window) {
 
+
         //region Inicializo objeto
         var objeto = function(){
             var labels = {
@@ -51,12 +52,14 @@
             logeoService.login(objeto.get()).then(function (data) {
 
                 objecResp = new decodeJson(data);
-                
-
+                // redirecciono a entorno
+                $window.location.href = './views/00_paginas/entorno.html';
 
             }, function(reason){
+                toastr.warning('Alerta!', 'Email o password incorrectos!');
 
             }, function(update){
+
                 alert('Got notification: ' + update);
             });
 

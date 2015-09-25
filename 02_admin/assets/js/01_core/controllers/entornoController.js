@@ -1,6 +1,6 @@
 (function (_) {
 
-  angular.module('delta.controllers', [])
+  angular.module('Navigate.controllers', [])
     .controller('EntornoController', ['$scope', '$routeParams','$location','$window','$rootScope','$localStorage','$filter','entornoService', function ($scope, $routeParams,$location,$window,$rootScope,$localStorage,$filter,entornoService) {
         var codigoUsuario = $localStorage.usua_codigo;
         $scope.rand = $filter('date')(new Date(),'yyyyMMddHHmmss');

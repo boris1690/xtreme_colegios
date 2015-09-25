@@ -1,6 +1,6 @@
 (function () {
 
-  angular.module('delta.services', [])
+  angular.module('Navigate.services', [])
 
     .factory('entornoService', ['$http', '$q', '$filter', '$window','$localStorage', function ($http, $q, $filter, $window,$localStorage) {
 

@@ -1,5 +1,5 @@
 (function () {
-  angular.module('delta.directives',[])
+  angular.module('Navigate.directives',[])
       .directive('formLista', function () {
           return {
               restrict: 'E',

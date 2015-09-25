@@ -35,13 +35,13 @@
     });
   });
 
-  var app = angular.module('DeltaApp', [
+  var app = angular.module('NavigateApp', [
     'ngRoute',
     'ngStorage',
-    'delta.controllers',
-    'delta.services',
-    'delta.directives',
-    'delta.filters',
+    'Navigate.controllers',
+    'Navigate.services',
+    'Navigate.directives',
+    'Navigate.filters',
     'ui.router',
     'ngLoadingSpinner',
     'angular.filter',
