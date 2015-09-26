@@ -88,15 +88,23 @@ Route::post('login', function()
 //region Route Group Usuarios privado
 Route::group(['prefix' => '/usuarios','before' => 'authenticated'],  function()
 {
-        Route::get('', ['uses' => 'AplRefUsuarioController@index']);
+    Route::get('', ['uses' => 'AplRefUsuarioController@index']);
 
-        Route::get('{id}', ['uses' => 'AplRefUsuarioController@show']);
+    Route::get('{id}', ['uses' => 'AplRefUsuarioController@show']);
 
-        Route::post('', ['uses' => 'AplRefUsuarioController@store']);
+    Route::post('', ['uses' => 'AplRefUsuarioController@store']);
 
-        Route::put('{id}', ['uses' => 'AplRefUsuarioController@update']);
+    Route::put('{id}', ['uses' => 'AplRefUsuarioController@update']);
 
-        Route::delete('{id}', ['uses' => 'AplRefUsuarioController@destroy']);
+    Route::delete('{id}', ['uses' => 'AplRefUsuarioController@destroy']);
+
+});
+//endregion pri pri priva
+
+//region Route Group Navigate privado
+Route::group(['prefix' => '/navigate','before' => 'authenticated'],  function()
+{
+    Route::get('', ['uses' => 'AplNavigateController@index']);
 
 });
 //endregion pri pri priva

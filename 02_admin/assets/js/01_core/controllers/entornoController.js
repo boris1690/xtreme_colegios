@@ -5,6 +5,9 @@
         var codigoUsuario = $localStorage.usua_codigo;
         $scope.rand = $filter('date')(new Date(),'yyyyMMddHHmmss');
 
+
+          alert();
+
         entornoService.getUser(codigoUsuario).then(function (data) {
             if(data.status===200) {
                 $scope.usuario = data.data.data[0];

@@ -45,7 +45,7 @@
     'ui.router',
     'ngLoadingSpinner',
     'angular.filter',
-    'datatables',
+    //'datatables',
     'ngResource'
 
   ]);
@@ -63,46 +63,7 @@
 
             }
 
-
-
         });
+  }]);
 
-
-    /*$routeProvider
-     .when('/', {
-     template: '',
-     controller: 'validateController'
-     })
-     .when('/login', {
-     templateUrl: 'views/00_paginas/login.html',
-     controller: 'LogeoController'
-     })
-
-     .when('/entorno', {
-     abstract:true,
-     url: 'views/00_paginas/entorno.html',
-     templateUrl: 'views/00_paginas/entorno.html'
-     })
-
-     .otherwise({
-     redirectTo: '/'
-     });*/
-
-
-  }])
-      .run(function ($rootScope, $location) {
-        $rootScope.$on("$routeChangeStart", function (event, next, current) {
-
-            alert();
-
-          if ($rootScope.loggedInUser == null) {
-
-            // no logged user, redirect to /login
-            if (next.templateUrl === "partials/login.html") {
-            } else {
-              //$location.path('')
-            }
-          }
-        });
-      });
 })();
